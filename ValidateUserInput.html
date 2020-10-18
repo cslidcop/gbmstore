@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        function takeValue() {
+            var input = document.getElementById('textInput');
+
+            var body = document.body;
+            var paragraph = document.createElement('p');
+            paragraph.innerText = input.value;
+            input.value = ""
+
+            body.appendChild(paragraph)
+        }
+    </script>
+    <input id="textInput" type="text" />
+    <input type="button" onclick="takeValue()" value="submit" />
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="GbmStyle.css" />
+    <style>
+    #Gbm_Login_div{
+        width: 30%;
+    height: 50%;
+    top: 12%;
+    margin-left: 35%;
+    position: relative;
+    display: grid;
+    box-shadow: 0 0 3px rgb(0, 0, 0, 0.1);
+    font-family:sans-serif;
+
+}
+    #Gbm_Login_form__div{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top:10%;
+        }
+    #Gbm_Login_Uname_section_div{
+    width: 80%;
+    position: relative;
+    height: 60%;
+    margin-left: 8%;
+    font-size: 23px;
+    color:#8a8686;
+    font-size: sans-serif;
+    }
+    #Gbm_Login_Password_section_div{
+        
+    width: 80%;
+    position: relative;
+    height: 60%;
+    bottom: 28%;
+    margin-left: 8%;
+    font-size: 23px;
+    color:#8a8686;
+}
+#Gbm_Login_checkbox_section_div{
+    bottom: 55%;
+    position: relative;
+    margin-left: 8%;
+    color:#8a8686;
+    font-size: 18px;
+}
+#Gbm_Login_Button_section_div{
+    position: relative;
+    width: 90%;
+    height: 88%;
+    bottom: 67%;
+    left: 63%;
+    
+}
+#Gbm_Login_btn{
+    width: 30%;
+    height: 20%;
+    position: relative;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+    background-color: royalblue;
+    color:white;
+}
+#Gbm_Login_checkbox_ipt_div{
+    cursor: pointer;
+}
+#Gbm_Log_In_link__btn{
+    text-decoration:none;
+    color:white;
+    font: size 21px;
+    font-weight: Weight;
+}
+
+    </style>
+</head>
+<body>
+    <div id="Gbm_master__div_header">
+        <table id="Gbm_top_menu__table">
+            <tbody>
+                <tr>
+                    <td><a href="home.html"class="Gbm_top_menu__table_link">Home</a></td>
+                    <td><a href="All_product.html" class="Gbm_top_menu__table_link">Our Product</a></td>
+                    <td><a href="About-Us.html" class="Gbm_top_menu__table_link">About Us</a></td>
+                    <td><a href="Contact-Us.html" class="Gbm_top_menu__table_link">Contact Us</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div id="Gbm_master__div_sidebar"></div>
+    <div id="Gbm_master__div_container">
+        <div id="Gbm_Login_div">
+            <form method="POST" id="Gbm_Login_form__div">
+                <div id="Gbm_Login_Uname_section_div">
+                    <label for="Uname" id="Gbm_Login_username_lbl__div">Username</label><br>
+                    <input type="text" name="Username" id="Gbm_Login_username_input__div" style="width:100%;height:20%;">
+                </div>
+
+                <div id="Gbm_Login_Password_section_div">
+                    <label for="Password" id="Gbm_Login_password_lbl__div">Password</label><br>
+                    <input type="password" name="password" id="Gbm_Login_password_input__div" style="width:100%;height:20%;">
+                </div>
+                <div id="Gbm_Login_checkbox_section_div">
+                    <input type="checkbox" name="checkbox" id="Gbm_Login_checkbox_ipt_div">
+                    <label for="Remember_me" id="Gbm_Login_Remember_Me_div">Remember me</label>
+                </div>
+                <div id="Gbm_Login_Button_section_div">
+                    <button type="submit"id="Gbm_Login_btn"><a href="Admin.html" id="Gbm_Log_In_link__btn">Log In</a></button>
+                </div>
+            
+                
+            </form>
+        </div>   
+
+    </div>
+</body>
+</html>

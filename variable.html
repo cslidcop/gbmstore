@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        
+        //let student = { Name: "", Surname: "", Grade: 0, Age: 0 }
+        //student.Name = prompt("Please give your name")
+        //student.Surname = prompt("Please fill your Surnmame")
+        //student.Grade = Number(prompt("Enter your grade"))
+        //student.Age = Number(prompt("Please give your age"))
+        //alert("Name:" + student.Name +" "+ student.Surname + " " + student.Grade + " " + student.Age)
+        //information
+
+        let product = {NameOfProduct:"", Price:"", Category:"", Quantity:""}
+        product.NameOfProduct = prompt("Enter the name of your product")
+        product.Price = Number(prompt("Enter the price"))
+        product.Category = prompt("Enter the category")
+        product.Quantity = Number(prompt("Enter the quantity"))
+        
+
+        //paragraph
+
+        let paragraphName = document.createElement("p")
+        paragraphName.id = "Name_of_product"
+        paragraphName.innerText = "Name: " + product.NameOfProduct
+
+        let paragraphCate = document.createElement("p")
+        paragraphCate.id = "Category_of_product"
+        paragraphCate.innerText = "Category: " + product.Category
+
+        let paragraphQuantity = document.createElement("p")
+        paragraphQuantity.id = "Quantity_of_product"
+        paragraphQuantity.innerText = "Quantity: " + product.Quantity
+
+        let paragraphPrice = document.createElement("p")
+        paragraphPrice.id = "Price_of_product"
+        paragraphPrice.innerText = "Price: " + product.Price + " Rand"
+
+        //Body
+        let body = document.body
+        body.appendChild(paragraphName)
+        body.appendChild(paragraphCate)
+        body.appendChild(paragraphPrice)
+        body.appendChild(paragraphQuantity)
+    </script>
+</body>
+</html>

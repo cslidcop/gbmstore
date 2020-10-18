@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+
+    <script>
+
+        function if_condition_logic() {
+
+            if ((10 < 9 && 11 > 20) ||( 100 <= 22 && 10 < 11) ){
+                document.writeln("the result is " + true)
+            }
+            else {
+                document.writeln("the result is " + false)
+            }
+
+        }
+
+        function switch_condition_logic() {
+
+            var name = "Rock"
+
+            switch (name) {
+
+                case "Roach":
+
+                    document.writeln("Roach Name is: " + name)
+                    break;
+                case "Roh":
+
+                    document.writeln("Roh Name is: " + name)
+                    break;
+                case "Rock":
+
+                    document.writeln("Rock Name is: " + name)
+                    break;
+                case "Roachy":
+
+                    document.writeln("Roachy Name is: " + name)
+                    break;
+                default:
+
+            }
+
+        }
+
+        function for_loop_logic(){
+
+            var numbers = [1,2,4,3,5,3,5,6]
+
+            for (var i = 0; i < numbers.length; i++) {
+
+               document.writeln("element  number for: No" + i + " " + numbers[i])
+    
+            }
+        }
+
+        function foreach_loop_logic() {
+
+            var numbers = [1,2,4,3,5,3,5,6]
+            
+            for(var number of numbers) {
+                document.writeln("element  number foreach: " + number)
+            }
+        }
+
+        function whileloop_logic() {
+
+            var canBuyCar = 10;
+
+            while (canBuyCar > 1) {
+
+             
+                document.writeln('you bought a new car... welldone')
+                canBuyCar = canBuyCar - 1
+            }
+
+            document.writeln("sorry you don't have no more money")
+
+        }
+
+        function do_while_condition() {
+
+            var isGraduate = 10;
+ 
+
+            do {
+
+                document.writeln("Keep studying..")
+
+                var isGraduate = isGraduate - 1
+             
+    
+            } while (isGraduate > 1)
+
+            document.writeln("You are done studying")
+        }
+
+
+        //if_condition_logic();
+        //switch_condition_logic();
+      //  for_loop_logic();
+        //foreach_loop_logic()
+        //whileloop_logic()
+        do_while_condition()
+    </script>
+</body>
+</html>
