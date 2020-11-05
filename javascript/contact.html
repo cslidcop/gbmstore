@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="GbmStyle.css" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //gbmMasterDivHeader
+        var gbmMasterDivHeader = document.createElement("div")
+        gbmMasterDivHeader.id = "gbmMasterDivHeader"
+        gbmMasterDivHeader.style.background = "#191970"
+        gbmMasterDivHeader.style.width = "100%"
+        gbmMasterDivHeader.style.height = "10%"
+        gbmMasterDivHeader.style.position = "absolute"
+
+        var gbmTopMenuTable = document.createElement("table")
+        gbmTopMenuTable.id = "gbmTopMenuTable"
+        gbmTopMenuTable.style.borderSpacing = "12px"
+        gbmTopMenuTable.style.float = "right"
+        gbmTopMenuTable.style.marginRight = "2%"
+        gbmTopMenuTable.style.color = "white"
+        gbmTopMenuTable.style.textDecoration = "none"
+        gbmTopMenuTable.style.fontSize = "20px"
+        gbmTopMenuTable.style.fontFamily = "sans-serif"
+        gbmTopMenuTable.style.top = "11%"
+        gbmTopMenuTable.style.position = "relative"
+
+        
+        var tbody = document.createElement("TBODY")
+        var tr = document.createElement("tr")
+
+        var tdHome = document.createElement("td")     
+        var aHome = document.createElement("a")
+        aHome.href = "home.html"
+        aHome.innerText = "Home"
+        aHome.class = "gbmTopMenuTableLink"
+        aHome.style.color = "white"
+        aHome.style.textDecoration = "none"
+        tdHome.appendChild(aHome)
+
+        var tdProduct = document.createElement("td")
+        var aProduct = document.createElement("a")
+        aProduct.style.color = "white"
+        aProduct.style.textDecoration = "none"
+        aProduct.href = "All_product.html"
+        aProduct.innerText = "Our Products"
+        aProduct.class = "gbmTopMenuTableLink"
+        tdProduct.appendChild(aProduct)
+
+        var tdAboutUs = document.createElement("td")
+        var aAboutUs = document.createElement("a")
+        aAboutUs.href = "About-Us.html"
+        aAboutUs.innerText = "About Us"
+        aAboutUs.class = "gbmTopMenuTableLink"
+        aAboutUs.style.color = "white"
+        aAboutUs.style.textDecoration = "none"
+        tdAboutUs.appendChild(aAboutUs)
+
+        var tdContactUs = document.createElement("td")
+        var aContactUs = document.createElement("a")
+        aContactUs.href = "Contact-Us.html"
+        aContactUs.innerText = "Contact Us"
+        aContactUs.style.color = "white"
+        aContactUs.style.textDecoration = "none"
+        aContactUs.class = "gbmTopMenuTableLink"
+        tdContactUs.appendChild(aContactUs)
+
+
+        tr.appendChild(tdHome)
+        tr.appendChild(tdProduct)
+        tr.appendChild(tdAboutUs)
+        tr.appendChild(tdContactUs)
+        tbody.appendChild(tr)
+        gbmTopMenuTable.appendChild(tbody)
+        gbmMasterDivHeader.appendChild(gbmTopMenuTable)
+        document.body.appendChild(gbmMasterDivHeader)
+        
+        //gbmMasterDivSideBar
+        var gbmMasterDivSideBar = document.createElement("div")
+        gbmMasterDivSideBar.id = "gbmMasterDivSideBar"
+        gbmMasterDivSideBar.style.background = "#4682B4"
+        gbmMasterDivSideBar.style.width = "10%"
+        gbmMasterDivSideBar.style.height = "90%"
+        gbmMasterDivSideBar.style.top = "10%"
+        gbmMasterDivSideBar.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivSideBar)
+
+        //gbmMasterDivContainer
+        var gbmMasterDivContainer = document.createElement("div")
+        gbmMasterDivContainer.id = "gbmMasterDivContainer"
+        gbmMasterDivContainer.style.background = "white"
+        gbmMasterDivContainer.style.width = "90%"
+        gbmMasterDivContainer.style.height = "90%"
+        gbmMasterDivContainer.style.left = "10%"
+        gbmMasterDivContainer.style.top = "10%"
+        gbmMasterDivContainer.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivContainer)
+
+
+        var gbmContactUsFormDiv = document.createElement("form")
+        gbmContactUsFormDiv.id = "gbmContactUsFormDiv"
+        gbmContactUsFormDiv.style.width = "40%"
+        gbmContactUsFormDiv.style.height = "80%"
+        gbmContactUsFormDiv.style.position = "relative"
+        gbmContactUsFormDiv.style.left = "5%"
+        gbmContactUsFormDiv.style.top = "10%"
+        gbmMasterDivContainer.appendChild(gbmContactUsFormDiv)
+
+        var gbmContactUsTitleForm = document.createElement("h2")
+        gbmContactUsTitleForm.id = "gbmContactUsTitleForm"
+        gbmContactUsTitleForm.innerText = "Contact Us"
+        gbmContactUsTitleForm.style.textAlign = "center"
+        gbmContactUsTitleForm.style.width = "100%"
+        gbmContactUsTitleForm.style.position = "relative"
+        gbmContactUsTitleForm.style.fontSize = "71px"
+        gbmContactUsTitleForm.style.textShadow = "-4px 4px dimgray"
+        gbmContactUsFormDiv.appendChild(gbmContactUsTitleForm)
+
+        //gbmLnameDiv
+        var gbmLnameDiv = document.createElement("div")
+        gbmLnameDiv.id = "gbmLnameDiv"
+        gbmLnameDiv.style.width = "48%"
+        gbmLnameDiv.style.float = "left"
+        gbmLnameDiv.style.marginRight = "2%"
+        gbmLnameDiv.style.position = "relative"
+        gbmContactUsFormDiv.appendChild(gbmLnameDiv)
+
+        var gbmLblLnameDiv = document.createElement("label")
+        gbmLblLnameDiv.id = "gbmLblLnameDiv"
+        gbmLblLnameDiv.innerHTML = "Last Name<BR>"
+        gbmLblLnameDiv.setAttribute("for", "gbmLname")
+        gbmLnameDiv.appendChild(gbmLblLnameDiv)
+
+        var gbmTxtLnameDiv = document.createElement("input")
+        gbmTxtLnameDiv.id = "gbmTxtLnameDiv"
+        gbmTxtLnameDiv.style.width = "100%"
+        gbmTxtLnameDiv.setAttribute("type", "text")
+        gbmLnameDiv.appendChild(gbmTxtLnameDiv)
+
+        //gbmFnameDiv
+        var gbmFnameDiv = document.createElement("div")
+        gbmFnameDiv.id = "gbmFnameDiv"
+        gbmFnameDiv.style.width = "48%"
+        gbmFnameDiv.style.position = "relative"
+        gbmFnameDiv.style.float = "right"
+        gbmFnameDiv.style.marginLeft = "2%"
+        gbmContactUsFormDiv.appendChild(gbmFnameDiv)
+
+        var gbmFnameLblDiv = document.createElement("label")
+        gbmFnameLblDiv.id = "gbmFnameLblDiv"
+        gbmFnameLblDiv.innerHTML = "First Name<BR>"
+        gbmFnameLblDiv.setAttribute("for", "gbmFname")
+        gbmFnameDiv.appendChild(gbmFnameLblDiv)
+
+        var gbmTxtFnameDiv = document.createElement("input")
+        gbmTxtFnameDiv.id = "gbmTxtFnameDiv"
+        gbmTxtFnameDiv.setAttribute("type", "text")
+        gbmTxtFnameDiv.style.width = "100%"
+        gbmFnameDiv.appendChild(gbmTxtFnameDiv)
+
+        //gbmEmailDiv
+        var gbmEmailDiv = document.createElement("div")
+        gbmEmailDiv.id = "gbmEmailDiv"
+        gbmContactUsFormDiv.appendChild(gbmEmailDiv)
+
+        var gbmLblEmailDiv = document.createElement("label")
+        gbmLblEmailDiv.id = "gbmLblEmailDiv"
+        gbmLblEmailDiv.innerHTML = "Your Email<BR>"
+        gbmLblEmailDiv.setAttribute("for", "gbmEmail")
+        gbmEmailDiv.appendChild(gbmLblEmailDiv)
+
+        var gbmTxtEmailDiv = document.createElement("input")
+        gbmTxtEmailDiv.id = "gbmTxtEmailDiv"
+        gbmTxtEmailDiv.style.width = "100%"
+        gbmTxtEmailDiv.setAttribute("type", "text")
+        gbmEmailDiv.appendChild(gbmTxtEmailDiv)
+
+        //gbmSubjectDiv
+        var gbmSubjectDiv = document.createElement("div")
+        gbmSubjectDiv.id = "gbmSubjectDiv"
+        gbmContactUsFormDiv.appendChild(gbmSubjectDiv)
+
+        var gbmLblSubjectDiv = document.createElement("label")
+        gbmLblSubjectDiv.id = "gbmLblSubjectDiv"
+        gbmLblSubjectDiv.innerHTML = "Your Subject<BR>"
+        gbmLblSubjectDiv.setAttribute("for", "gbmSuject")
+        gbmSubjectDiv.appendChild(gbmLblSubjectDiv)
+
+        var gbmTxtSujectDiv = document.createElement("input")
+        gbmTxtSujectDiv.id = "gbmTxtSujectDiv"
+        gbmTxtSujectDiv.setAttribute("type", "text")
+        gbmTxtSujectDiv.style.width = "100%"
+        gbmSubjectDiv.appendChild(gbmTxtSujectDiv)
+
+        //gbmYourMessageDiv
+        var gbmYourMessageDiv = document.createElement("div")
+        gbmYourMessageDiv.id = "gbmYourMessageDiv"
+        gbmYourMessageDiv.style.width = "100%"
+        gbmYourMessageDiv.style.height = "50%"
+        gbmYourMessageDiv.style.position = "relative"
+        gbmContactUsFormDiv.appendChild(gbmYourMessageDiv)
+
+        var gbmLblYourMessageDiv = document.createElement("label")
+        gbmLblYourMessageDiv.id = "gbmLblYourMessageDiv"
+        gbmLblYourMessageDiv.innerHTML = "Your Message<BR>"
+        gbmLblYourMessageDiv.setAttribute("for", "gbmSuject")
+        gbmYourMessageDiv.appendChild(gbmLblYourMessageDiv)
+
+        var gbmAreaYourMessageDiv = document.createElement("TEXTAREA");
+        gbmAreaYourMessageDiv.id = "gbmAreaYourMessageDiv"
+        gbmAreaYourMessageDiv.style.width = "100%"
+        gbmAreaYourMessageDiv.style.height = "50%"
+        gbmYourMessageDiv.appendChild(gbmAreaYourMessageDiv)
+
+        //gbmSendDiv
+        var gbmSendDiv = document.createElement("div")
+        gbmSendDiv.id = "gbmSendDiv"
+        gbmSendDiv.style.width = "100%"
+        gbmSendDiv.style.position = "relative"
+        gbmSendDiv.style.bottom = "15%"
+        gbmContactUsFormDiv.appendChild(gbmSendDiv)
+        //==>button send
+        var gbmDivButSend = document.createElement("div")
+        gbmDivButSend.id = "gbmDivButSend"
+        gbmDivButSend.style.float = "left"
+        gbmDivButSend.style.width = "50%"
+        gbmDivButSend.style.top = "20%"
+        gbmSendDiv.appendChild(gbmDivButSend)
+
+        var gbmButtonSendDiv = document.createElement("Button")
+        gbmButtonSendDiv.id = "gbmButtonSendDiv"
+        gbmButtonSendDiv.setAttribute("type", "button")
+        gbmButtonSendDiv.innerText = "Send"
+        gbmButtonSendDiv.style.width = "50%"
+        gbmButtonSendDiv.style.height = "50%"
+        gbmButtonSendDiv.style.position = "relative"
+        gbmButtonSendDiv.style.fontSize = "25px"
+        gbmButtonSendDiv.style.Color = "white"
+        gbmButtonSendDiv.style.backgroundColor = "#191970"
+        gbmButtonSendDiv.style.cursor = "pointer"
+        gbmDivButSend.appendChild(gbmButtonSendDiv)
+        
+
+        //==>button cancel
+        var gbmDivButCancel = document.createElement("div")
+        gbmDivButCancel.id = "gbmDivButCancel"
+        gbmDivButCancel.style.float = "right"
+        gbmDivButCancel.style.width = "50%"
+        gbmDivButCancel.style.position = "relative"
+        gbmDivButCancel.style.right = "17%"
+        gbmSendDiv.appendChild(gbmDivButCancel)
+
+        var gbmButtonCancelDiv = document.createElement("Button")
+        gbmButtonCancelDiv.id = "gbmButtonCancelDiv"
+        gbmButtonCancelDiv.setAttribute("type", "button")
+        gbmButtonCancelDiv.innerText = "cancel"
+        gbmButtonCancelDiv.style.width = "50%"
+        gbmButtonCancelDiv.style.height = "50%"
+        gbmButtonCancelDiv.style.position = "relative"
+        gbmButtonCancelDiv.style.fontSize = "25px"
+        gbmButtonCancelDiv.style.backgroundColor = "#ff0000"
+        gbmButtonCancelDiv.style.color = "white"
+        gbmButtonCancelDiv.style.cursor = "pointer"
+        gbmDivButCancel.appendChild(gbmButtonCancelDiv)
+
+
+    </script>
+</body>
+</html>
