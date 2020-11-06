@@ -1,0 +1,575 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="GbmStyle.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //gbmMasterDivHeader
+        var gbmMasterDivHeader = document.createElement("div")
+        gbmMasterDivHeader.id = "gbmMasterDivHeader"
+        gbmMasterDivHeader.style.background = "#191970"
+        gbmMasterDivHeader.style.width = "100%"
+        gbmMasterDivHeader.style.height = "10%"
+        gbmMasterDivHeader.style.position = "absolute"
+
+        var gbmTopMenuTable = document.createElement("table")
+        gbmTopMenuTable.id = "gbmTopMenuTable"
+        gbmTopMenuTable.style.borderSpacing = "12px"
+        gbmTopMenuTable.style.float = "right"
+        gbmTopMenuTable.style.marginRight = "2%"
+        gbmTopMenuTable.style.color = "white"
+        gbmTopMenuTable.style.textDecoration = "none"
+        gbmTopMenuTable.style.fontSize = "20px"
+        gbmTopMenuTable.style.fontFamily = "sans-serif"
+        gbmTopMenuTable.style.top = "11%"
+        gbmTopMenuTable.style.position = "relative"
+
+
+        var tbody = document.createElement("TBODY")
+        var tr = document.createElement("tr")
+
+        var tdHome = document.createElement("td")
+        var aHome = document.createElement("a")
+        aHome.href = "index.html"
+        aHome.innerText = "Home"
+        aHome.class = "gbmTopMenuTableLink"
+        aHome.style.color = "white"
+        aHome.style.textDecoration = "none"
+        tdHome.appendChild(aHome)
+
+        var tdProduct = document.createElement("td")
+        var aProduct = document.createElement("a")
+        aProduct.style.color = "white"
+        aProduct.style.textDecoration = "none"
+        aProduct.href = "All_product.html"
+        aProduct.innerText = "Our Products"
+        aProduct.class = "gbmTopMenuTableLink"
+        tdProduct.appendChild(aProduct)
+
+        var tdAboutUs = document.createElement("td")
+        var aAboutUs = document.createElement("a")
+        aAboutUs.href = "About-Us.html"
+        aAboutUs.innerText = "About Us"
+        aAboutUs.class = "gbmTopMenuTableLink"
+        aAboutUs.style.color = "white"
+        aAboutUs.style.textDecoration = "none"
+        tdAboutUs.appendChild(aAboutUs)
+
+        var tdContactUs = document.createElement("td")
+        var aContactUs = document.createElement("a")
+        aContactUs.href = "Contact-Us.html"
+        aContactUs.innerText = "Contact Us"
+        aContactUs.style.color = "white"
+        aContactUs.style.textDecoration = "none"
+        aContactUs.class = "gbmTopMenuTableLink"
+        tdContactUs.appendChild(aContactUs)
+
+
+        tr.appendChild(tdHome)
+        tr.appendChild(tdProduct)
+        tr.appendChild(tdAboutUs)
+        tr.appendChild(tdContactUs)
+        tbody.appendChild(tr)
+        gbmTopMenuTable.appendChild(tbody)
+        gbmMasterDivHeader.appendChild(gbmTopMenuTable)
+        document.body.appendChild(gbmMasterDivHeader)
+
+        //gbmMasterDivSideBar
+        var gbmMasterDivSideBar = document.createElement("div")
+        gbmMasterDivSideBar.id = "gbmMasterDivSideBar"
+        gbmMasterDivSideBar.style.background = "#4682B4"
+        gbmMasterDivSideBar.style.width = "10%"
+        gbmMasterDivSideBar.style.height = "90%"
+        gbmMasterDivSideBar.style.top = "10%"
+        gbmMasterDivSideBar.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivSideBar)
+
+        //gbmMasterDivContainer
+        var gbmMasterDivContainer = document.createElement("div")
+        gbmMasterDivContainer.id = "gbmMasterDivContainer"
+        gbmMasterDivContainer.style.background = "white"
+        gbmMasterDivContainer.style.width = "90%"
+        gbmMasterDivContainer.style.height = "90%"
+        gbmMasterDivContainer.style.left = "10%"
+        gbmMasterDivContainer.style.top = "10%"
+        gbmMasterDivContainer.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivContainer)
+
+
+        //*******************gbmBookingProductDiv
+        var gbmBookingProductDiv = document.createElement("div")
+        gbmBookingProductDiv.id = "gbmBookingProductDiv"
+        gbmBookingProductDiv.style.left = "20%"
+        gbmBookingProductDiv.style.top = "10%"
+        gbmBookingProductDiv.style.width = "80%"
+        gbmBookingProductDiv.style.position = "relative"
+        gbmMasterDivContainer.appendChild(gbmBookingProductDiv)
+
+        //==>gbmBookingProductTableDiv
+        var gbmBookingProductTableDiv = document.createElement("table")
+        gbmBookingProductTableDiv.id = "gbmBookingProductTableDiv"
+        gbmBookingProductTableDiv.setAttribute("border", "1px")
+        gbmBookingProductTableDiv.style.borderCollapse = "collapse"
+        gbmBookingProductTableDiv.style.height = "360px"
+        gbmBookingProductTableDiv.style.textAlign = "center"
+        gbmBookingProductTableDiv.innerHTML = "<caption><strong>Product Booking</strong></caption>"
+        gbmBookingProductTableDiv.style.borderStyle = "solid"
+        gbmBookingProductTableDiv.style.borderSpacing = "22px"
+        gbmBookingProductDiv.appendChild(gbmBookingProductTableDiv)
+
+        //====>tbody
+        var gbmBoughProductTbody = document.createElement("tbody")
+        gbmBoughProductTbody.id = "gbmBoughProductTbody"
+        gbmBookingProductTableDiv.appendChild(gbmBoughProductTbody)
+
+        //tr1
+        var gbmBookingProductTr1 = document.createElement("tr")
+        gbmBookingProductTr1.id = "gbmBookingProductTr1"
+        gbmBookingProductTr1.style.backgroundColor = "#4682B4"
+        gbmBookingProductTr1.style.color = "white"
+        gbmBoughProductTbody.appendChild(gbmBookingProductTr1)
+
+        //tr1td
+        var gbmBookingProductTr1Td = document.createElement("td")
+        gbmBookingProductTr1Td.id = "gbmBookingProductTr1Td"
+        gbmBookingProductTr1Td.innerHTML = "<strong>Date</strong>"
+        gbmBookingProductTr1.appendChild(gbmBookingProductTr1Td)
+
+        //tr1td2
+        var gbmBookingProductTr1Td2 = document.createElement("td")
+        gbmBookingProductTr1Td2.id = "gbmBookingProductTr1Td2"
+        gbmBookingProductTr1Td2.innerHTML = "<strong>Time</strong>"
+        gbmBookingProductTr1.appendChild(gbmBookingProductTr1Td2)
+
+        //tr1td3
+        var gbmBookingProductTr1Td3 = document.createElement("td")
+        gbmBookingProductTr1Td3.id = "gbmBookingProductTr1Td3"
+        gbmBookingProductTr1Td3.innerHTML = "<strong>Product</strong>"
+        gbmBookingProductTr1.appendChild(gbmBookingProductTr1Td3)
+
+        //tr1td4
+        var gbmBookingProductTr1Td4 = document.createElement("td")
+        gbmBookingProductTr1Td4.id = "gbmBookingProductTr1Td4"
+        gbmBookingProductTr1Td4.innerHTML = "<strong>Category</strong>"
+        gbmBookingProductTr1.appendChild(gbmBookingProductTr1Td4)
+
+        //tr1td5
+        var gbmBookingProductTr1Td5 = document.createElement("td")
+        gbmBookingProductTr1Td5.id = "gbmBookingProductTr1Td5"
+        gbmBookingProductTr1Td5.innerHTML = "<strong>Quantity</strong>"
+        gbmBookingProductTr1.appendChild(gbmBookingProductTr1Td5)
+
+        //tr1td6
+        var gbmBookingProductTr1Td6 = document.createElement("td")
+        gbmBookingProductTr1Td6.id = "gbmBookingProductTr1Td6"
+        gbmBookingProductTr1Td6.innerHTML = "<strong>Amount</strong>"
+        gbmBookingProductTr1.appendChild(gbmBookingProductTr1Td6)
+
+        //tr1td7
+        var gbmBookingProductTr1Td7 = document.createElement("td")
+        gbmBookingProductTr1Td7.id = "gbmBookingProductTr1Td7"
+        gbmBookingProductTr1Td7.innerHTML = "<strong>Customer</strong>"
+        gbmBookingProductTr1.appendChild(gbmBookingProductTr1Td7)
+
+        //tr1td8
+        var gbmBookingProductTr1Td8 = document.createElement("td")
+        gbmBookingProductTr1Td8.id = "gbmBookingProductTr1Td8"
+        gbmBookingProductTr1Td8.innerHTML = "<strong>Item Track</strong>"
+        gbmBookingProductTr1.appendChild(gbmBookingProductTr1Td8)
+
+        //tr1td9
+        var gbmBookingProductTr1Td9 = document.createElement("td")
+        gbmBookingProductTr1Td9.id = "gbmBookingProductTr1Td9"
+        gbmBookingProductTr1Td9.innerHTML = "<strong>Phone Number</strong>"
+        gbmBookingProductTr1.appendChild(gbmBookingProductTr1Td9)
+
+
+        //--------------------------------------------
+
+        //tr2
+        var gbmBookingProductTr2 = document.createElement("tr")
+        gbmBookingProductTr2.id = "gbmBookingProductTr2"
+        gbmBoughProductTbody.appendChild(gbmBookingProductTr2)
+
+        //tr2td
+        var gbmBookingProductTr2Td = document.createElement("td")
+        gbmBookingProductTr2Td.id = "gbmBookingProductTr2Td"
+        gbmBookingProductTr2Td.innerHTML = "<strong>02/05/2020</strong>"
+        gbmBookingProductTr2.appendChild(gbmBookingProductTr2Td)
+
+        //tr2td2
+        var gbmBookingProductTr2Td2 = document.createElement("td")
+        gbmBookingProductTr2Td2.id = "gbmBookingProductTr2Td2"
+        gbmBookingProductTr2Td2.innerHTML = "<strong>08:25 AM</strong>"
+        gbmBookingProductTr2.appendChild(gbmBookingProductTr2Td2)
+
+        //tr2td3
+        var gbmBookingProductTr2Td3 = document.createElement("td")
+        gbmBookingProductTr2Td3.id = "gbmBookingProductTr2Td3"
+        gbmBookingProductTr2Td3.innerHTML = "<strong>Blue Band</strong>"
+        gbmBookingProductTr2.appendChild(gbmBookingProductTr2Td3)
+
+        //tr2td4
+        var gbmBookingProductTr2Td4 = document.createElement("td")
+        gbmBookingProductTr2Td4.id = "gbmBookingProductTr2Td4"
+        gbmBookingProductTr2Td4.innerHTML = "<strong>Butter</strong>"
+        gbmBookingProductTr2.appendChild(gbmBookingProductTr2Td4)
+
+        //tr2td5
+        var gbmBookingProductTr2Td5 = document.createElement("td")
+        gbmBookingProductTr2Td5.id = "gbmBookingProductTr2Td5"
+        gbmBookingProductTr2Td5.innerHTML = "<strong>2</strong>"
+        gbmBookingProductTr2.appendChild(gbmBookingProductTr2Td5)
+
+        //tr2td6
+        var gbmBookingProductTr2Td6 = document.createElement("td")
+        gbmBookingProductTr2Td6.id = "gbmBookingProductTr2Td6"
+        gbmBookingProductTr2Td6.innerHTML = "<strong>R250,00</strong>"
+        gbmBookingProductTr2.appendChild(gbmBookingProductTr2Td6)
+
+        //tr2td7
+        var gbmBookingProductTr2Td7 = document.createElement("td")
+        gbmBookingProductTr2Td7.id = "gbmBookingProductTr2Td7"
+        gbmBookingProductTr2Td7.innerHTML = "<strong>Grace</strong>"
+        gbmBookingProductTr2.appendChild(gbmBookingProductTr2Td7)
+
+        //tr2td8
+        var gbmBookingProductTr2Td8 = document.createElement("td")
+        gbmBookingProductTr2Td8.id = "gbmBookingProductTr2Td8"
+        gbmBookingProductTr2Td8.innerHTML = "<strong>Successfull</strong>"
+        gbmBookingProductTr2.appendChild(gbmBookingProductTr2Td8)
+
+        //tr2td9
+        var gbmBookingProductTr2Td9 = document.createElement("td")
+        gbmBookingProductTr2Td9.id = "gbmBookingProductTr1Td9"
+        gbmBookingProductTr2Td9.innerHTML = "<strong>0682915931</strong>"
+        gbmBookingProductTr2.appendChild(gbmBookingProductTr2Td9)
+
+        ///*********-*----------*-*******
+
+        //tr3
+        var gbmBookingProductTr3 = document.createElement("tr")
+        gbmBookingProductTr3.id = "gbmBookingProductTr3"
+        gbmBoughProductTbody.appendChild(gbmBookingProductTr3)
+
+        //tr2td
+        var gbmBookingProductTr3Td = document.createElement("td")
+        gbmBookingProductTr3Td.id = "gbmBookingProductTr3Td"
+        gbmBookingProductTr3Td.innerHTML = "<strong>12/05/2020</strong>"
+        gbmBookingProductTr3.appendChild(gbmBookingProductTr3Td)
+
+        //tr2td2
+        var gbmBookingProductTr3Td2 = document.createElement("td")
+        gbmBookingProductTr3Td2.id = "gbmBookingProductTr3Td2"
+        gbmBookingProductTr3Td2.innerHTML = "<strong>10:25 AM</strong>"
+        gbmBookingProductTr3.appendChild(gbmBookingProductTr3Td2)
+
+        //tr2td3
+        var gbmBookingProductTr3Td3 = document.createElement("td")
+        gbmBookingProductTr3Td3.id = "gbmBookingProductTr3Td3"
+        gbmBookingProductTr3Td3.innerHTML = "<strong>Soft Skin</strong>"
+        gbmBookingProductTr3.appendChild(gbmBookingProductTr3Td3)
+
+        //tr2td4
+        var gbmBookingProductTr3Td4 = document.createElement("td")
+        gbmBookingProductTr3Td4.id = "gbmBookingProductTr3Td4"
+        gbmBookingProductTr3Td4.innerHTML = "<strong>Lotion</strong>"
+        gbmBookingProductTr3.appendChild(gbmBookingProductTr3Td4)
+
+        //tr2td5
+        var gbmBookingProductTr3Td5 = document.createElement("td")
+        gbmBookingProductTr3Td5.id = "gbmBookingProductTr3Td5"
+        gbmBookingProductTr3Td5.innerHTML = "<strong>4</strong>"
+        gbmBookingProductTr3.appendChild(gbmBookingProductTr3Td5)
+
+        //tr2td6
+        var gbmBookingProductTr3Td6 = document.createElement("td")
+        gbmBookingProductTr3Td6.id = "gbmBookingProductTr3Td6"
+        gbmBookingProductTr3Td6.innerHTML = "<strong>R150,00</strong>"
+        gbmBookingProductTr3.appendChild(gbmBookingProductTr3Td6)
+
+        //tr2td7
+        var gbmBookingProductTr3Td7 = document.createElement("td")
+        gbmBookingProductTr3Td7.id = "gbmBookingProductTr3Td7"
+        gbmBookingProductTr3Td7.innerHTML = "<strong>Slid</strong>"
+        gbmBookingProductTr3.appendChild(gbmBookingProductTr3Td7)
+
+        //tr2td8
+        var gbmBookingProductTr3Td8 = document.createElement("td")
+        gbmBookingProductTr3Td8.id = "gbmBookingProductTr3Td8"
+        gbmBookingProductTr3Td8.innerHTML = "<strong>Successfull</strong>"
+        gbmBookingProductTr3.appendChild(gbmBookingProductTr3Td8)
+
+        //tr2td9
+        var gbmBookingProductTr3Td9 = document.createElement("td")
+        gbmBookingProductTr3Td9.id = "gbmBookingProductTr3Td9"
+        gbmBookingProductTr3Td9.innerHTML = "<strong>0682915931</strong>"
+        gbmBookingProductTr3.appendChild(gbmBookingProductTr3Td9)
+
+        //****************---------******************
+
+        //tr3
+        var gbmBookingProductTr4 = document.createElement("tr")
+        gbmBookingProductTr4.id = "gbmBookingProductTr4"
+        gbmBoughProductTbody.appendChild(gbmBookingProductTr4)
+
+        //tr2td
+        var gbmBookingProductTr4Td = document.createElement("td")
+        gbmBookingProductTr4Td.id = "gbmBookingProductTr4Td"
+        gbmBookingProductTr4Td.innerHTML = "<strong></strong>"
+        gbmBookingProductTr4.appendChild(gbmBookingProductTr4Td)
+
+        //tr2td2
+        var gbmBookingProductTr4Td2 = document.createElement("td")
+        gbmBookingProductTr4Td2.id = "gbmBookingProductTr4Td2"
+        gbmBookingProductTr4Td2.innerHTML = "<strong></strong>"
+        gbmBookingProductTr4.appendChild(gbmBookingProductTr4Td2)
+
+        //tr2td3
+        var gbmBookingProductTr4Td3 = document.createElement("td")
+        gbmBookingProductTr4Td3.id = "gbmBookingProductTr4Td3"
+        gbmBookingProductTr4Td3.innerHTML = "<strong></strong>"
+        gbmBookingProductTr4.appendChild(gbmBookingProductTr4Td3)
+
+        //tr2td4
+        var gbmBookingProductTr4Td4 = document.createElement("td")
+        gbmBookingProductTr4Td4.id = "gbmBookingProductTr3Td4"
+        gbmBookingProductTr4Td4.innerHTML = "<strong></strong>"
+        gbmBookingProductTr4.appendChild(gbmBookingProductTr4Td4)
+
+        //tr2td5
+        var gbmBookingProductTr4Td5 = document.createElement("td")
+        gbmBookingProductTr4Td5.id = "gbmBookingProductTr4Td5"
+        gbmBookingProductTr4Td5.innerHTML = "<strong></strong>"
+        gbmBookingProductTr4.appendChild(gbmBookingProductTr4Td5)
+
+        //tr2td6
+        var gbmBookingProductTr4Td6 = document.createElement("td")
+        gbmBookingProductTr4Td6.id = "gbmBookingProductTr4Td6"
+        gbmBookingProductTr4Td6.innerHTML = "<strong></strong>"
+        gbmBookingProductTr4.appendChild(gbmBookingProductTr4Td6)
+
+        //tr2td7
+        var gbmBookingProductTr4Td7 = document.createElement("td")
+        gbmBookingProductTr4Td7.id = "gbmBookingProductTr4Td7"
+        gbmBookingProductTr4Td7.innerHTML = "<strong></strong>"
+        gbmBookingProductTr4.appendChild(gbmBookingProductTr4Td7)
+
+        //tr2td8
+        var gbmBookingProductTr4Td8 = document.createElement("td")
+        gbmBookingProductTr4Td8.id = "gbmBookingProductTr4Td8"
+        gbmBookingProductTr4Td8.innerHTML = "<strong></strong>"
+        gbmBookingProductTr4.appendChild(gbmBookingProductTr4Td8)
+
+        //tr2td9
+        var gbmBookingProductTr4Td9 = document.createElement("td")
+        gbmBookingProductTr4Td9.id = "gbmBookingProductTr3Td9"
+        gbmBookingProductTr4Td9.innerHTML = "<strong></strong>"
+        gbmBookingProductTr4.appendChild(gbmBookingProductTr4Td9)
+
+        //***************------*****************
+
+        //tr3
+        var gbmBookingProductTr5 = document.createElement("tr")
+        gbmBookingProductTr5.id = "gbmBookingProductTr5"
+        gbmBoughProductTbody.appendChild(gbmBookingProductTr5)
+
+        //tr2td
+        var gbmBookingProductTr5Td = document.createElement("td")
+        gbmBookingProductTr5Td.id = "gbmBookingProductTr5Td"
+        gbmBookingProductTr5Td.innerHTML = "<strong></strong>"
+        gbmBookingProductTr5.appendChild(gbmBookingProductTr5Td)
+
+        //tr2td2
+        var gbmBookingProductTr5Td2 = document.createElement("td")
+        gbmBookingProductTr5Td2.id = "gbmBookingProductTr5Td2"
+        gbmBookingProductTr5Td2.innerHTML = "<strong></strong>"
+        gbmBookingProductTr5.appendChild(gbmBookingProductTr5Td2)
+
+        //tr2td3
+        var gbmBookingProductTr5Td3 = document.createElement("td")
+        gbmBookingProductTr5Td3.id = "gbmBookingProductTr5Td3"
+        gbmBookingProductTr5Td3.innerHTML = "<strong></strong>"
+        gbmBookingProductTr5.appendChild(gbmBookingProductTr5Td3)
+
+        //tr2td4
+        var gbmBookingProductTr5Td4 = document.createElement("td")
+        gbmBookingProductTr5Td4.id = "gbmBookingProductTr5Td4"
+        gbmBookingProductTr5Td4.innerHTML = "<strong></strong>"
+        gbmBookingProductTr5.appendChild(gbmBookingProductTr5Td4)
+
+        //tr2td5
+        var gbmBookingProductTr5Td5 = document.createElement("td")
+        gbmBookingProductTr5Td5.id = "gbmBookingProductTr5Td5"
+        gbmBookingProductTr5Td5.innerHTML = "<strong></strong>"
+        gbmBookingProductTr5.appendChild(gbmBookingProductTr5Td5)
+
+        //tr2td6
+        var gbmBookingProductTr4Td6 = document.createElement("td")
+        gbmBookingProductTr4Td6.id = "gbmBookingProductTr4Td6"
+        gbmBookingProductTr4Td6.innerHTML = "<strong></strong>"
+        gbmBookingProductTr5.appendChild(gbmBookingProductTr4Td6)
+
+        //tr2td7
+        var gbmBookingProductTr5Td7 = document.createElement("td")
+        gbmBookingProductTr5Td7.id = "gbmBookingProductTr5Td7"
+        gbmBookingProductTr5Td7.innerHTML = "<strong</strong>"
+        gbmBookingProductTr5.appendChild(gbmBookingProductTr5Td7)
+
+        //tr2td8
+        var gbmBookingProductTr5Td8 = document.createElement("td")
+        gbmBookingProductTr4Td8.id = "gbmBookingProductTr5Td8"
+        gbmBookingProductTr5Td8.innerHTML = "<strong></strong>"
+        gbmBookingProductTr5.appendChild(gbmBookingProductTr5Td8)
+
+        //tr2td9
+        var gbmBookingProductTr5Td9 = document.createElement("td")
+        gbmBookingProductTr5Td9.id = "gbmBookingProductTr5Td9"
+        gbmBookingProductTr5Td9.innerHTML = "<strong></strong>"
+        gbmBookingProductTr5.appendChild(gbmBookingProductTr5Td9)
+
+        //***************-----------********************
+        //tr3
+        var gbmBookingProductTr6 = document.createElement("tr")
+        gbmBookingProductTr6.id = "gbmBookingProductTr6"
+        gbmBoughProductTbody.appendChild(gbmBookingProductTr6)
+
+        //tr2td
+        var gbmBookingProductTr6Td = document.createElement("td")
+        gbmBookingProductTr6Td.id = "gbmBookingProductTr6Td"
+        gbmBookingProductTr6Td.innerHTML = "<strong></strong>"
+        gbmBookingProductTr6.appendChild(gbmBookingProductTr6Td)
+
+        //tr2td2
+        var gbmBookingProductTr6Td2 = document.createElement("td")
+        gbmBookingProductTr6Td2.id = "gbmBookingProductTr6Td2"
+        gbmBookingProductTr6Td2.innerHTML = "<strong></strong>"
+        gbmBookingProductTr6.appendChild(gbmBookingProductTr6Td2)
+
+        //tr2td3
+        var gbmBookingProductTr6Td3 = document.createElement("td")
+        gbmBookingProductTr6Td3.id = "gbmBookingProductTr6Td3"
+        gbmBookingProductTr6Td3.innerHTML = "<strong></strong>"
+        gbmBookingProductTr6.appendChild(gbmBookingProductTr6Td3)
+
+        //tr2td4
+        var gbmBookingProductTr6Td4 = document.createElement("td")
+        gbmBookingProductTr6Td4.id = "gbmBookingProductTr6Td4"
+        gbmBookingProductTr6Td4.innerHTML = "<strong></strong>"
+        gbmBookingProductTr6.appendChild(gbmBookingProductTr6Td4)
+
+        //tr2td5
+        var gbmBookingProductTr6Td5 = document.createElement("td")
+        gbmBookingProductTr6Td5.id = "gbmBookingProductTr6Td5"
+        gbmBookingProductTr6Td5.innerHTML = "<strong></strong>"
+        gbmBookingProductTr6.appendChild(gbmBookingProductTr6Td5)
+
+        //tr2td6
+        var gbmBookingProductTr6Td6 = document.createElement("td")
+        gbmBookingProductTr6Td6.id = "gbmBookingProductTr6Td6"
+        gbmBookingProductTr6Td6.innerHTML = "<strong></strong>"
+        gbmBookingProductTr6.appendChild(gbmBookingProductTr6Td6)
+
+        //tr2td7
+        var gbmBookingProductTr6Td7 = document.createElement("td")
+        gbmBookingProductTr6Td7.id = "gbmBookingProductTr6Td7"
+        gbmBookingProductTr6Td7.innerHTML = "<strong></strong>"
+        gbmBookingProductTr6.appendChild(gbmBookingProductTr6Td7)
+
+        //tr2td8
+        var gbmBookingProductTr6Td8 = document.createElement("td")
+        gbmBookingProductTr6Td8.id = "gbmBookingProductTr6Td8"
+        gbmBookingProductTr6Td8.innerHTML = "<strong></strong>"
+        gbmBookingProductTr6.appendChild(gbmBookingProductTr6Td8)
+
+        //tr2td9
+        var gbmBookingProductTr6Td9 = document.createElement("td")
+        gbmBookingProductTr6Td9.id = "gbmBookingProductTr6Td9"
+        gbmBookingProductTr6Td9.innerHTML = "<strong></strong>"
+        gbmBookingProductTr6.appendChild(gbmBookingProductTr6Td9)
+
+        //-*************---------------
+        //tr3
+        var gbmBookingProductTr7 = document.createElement("tr")
+        gbmBookingProductTr7.id = "gbmBookingProductTr7"
+        gbmBoughProductTbody.appendChild(gbmBookingProductTr7)
+
+        //tr2td
+        var gbmBookingProductTr7Td = document.createElement("td")
+        gbmBookingProductTr7Td.id = "gbmBookingProductTr7Td"
+        gbmBookingProductTr7Td.innerHTML = "<strong></strong>"
+        gbmBookingProductTr7.appendChild(gbmBookingProductTr7Td)
+
+        //tr2td2
+        var gbmBookingProductTr7Td2 = document.createElement("td")
+        gbmBookingProductTr7Td2.id = "gbmBookingProductTr7Td2"
+        gbmBookingProductTr7Td2.innerHTML = "<strong></strong>"
+        gbmBookingProductTr7.appendChild(gbmBookingProductTr7Td2)
+
+        //tr2td3
+        var gbmBookingProductTr7Td3 = document.createElement("td")
+        gbmBookingProductTr7Td3.id = "gbmBookingProductTr6Td3"
+        gbmBookingProductTr7Td3.innerHTML = "<strong></strong>"
+        gbmBookingProductTr7.appendChild(gbmBookingProductTr7Td3)
+
+        //tr2td4
+        var gbmBookingProductTr7Td4 = document.createElement("td")
+        gbmBookingProductTr7Td4.id = "gbmBookingProductTr7Td4"
+        gbmBookingProductTr7Td4.innerHTML = "<strong></strong>"
+        gbmBookingProductTr7.appendChild(gbmBookingProductTr7Td4)
+
+        //tr2td5
+        var gbmBookingProductTr7Td5 = document.createElement("td")
+        gbmBookingProductTr7Td5.id = "gbmBookingProductTr7Td5"
+        gbmBookingProductTr7Td5.innerHTML = "<strong></strong>"
+        gbmBookingProductTr7.appendChild(gbmBookingProductTr7Td5)
+
+        //tr2td6
+        var gbmBookingProductTr7Td6 = document.createElement("td")
+        gbmBookingProductTr7Td6.id = "gbmBookingProductTr7Td6"
+        gbmBookingProductTr7Td6.innerHTML = "<strong></strong>"
+        gbmBookingProductTr7.appendChild(gbmBookingProductTr7Td6)
+
+        //tr2td7
+        var gbmBookingProductTr7Td7 = document.createElement("td")
+        gbmBookingProductTr7Td7.id = "gbmBookingProductTr7Td7"
+        gbmBookingProductTr7Td7.innerHTML = "<strong></strong>"
+        gbmBookingProductTr7.appendChild(gbmBookingProductTr7Td7)
+
+        //tr2td8
+        var gbmBookingProductTr7Td8 = document.createElement("td")
+        gbmBookingProductTr7Td8.id = "gbmBookingProductTr7Td8"
+        gbmBookingProductTr7Td8.innerHTML = "<strong></strong>"
+        gbmBookingProductTr7.appendChild(gbmBookingProductTr7Td8)
+
+        //tr2td9
+        var gbmBookingProductTr7Td9 = document.createElement("td")
+        gbmBookingProductTr7Td9.id = "gbmBookingProductTr6Td9"
+        gbmBookingProductTr7Td9.innerHTML = "<strong></strong>"
+        gbmBookingProductTr7.appendChild(gbmBookingProductTr7Td9)
+
+        //link
+        var gbmBookingProductDivAI = document.createElement("a")
+        gbmBookingProductDivAI.id = "gbmBookingProductDivAI"
+        gbmBookingProductDivAI.href = "Admin.html"
+        gbmBookingProductDiv.appendChild(gbmBookingProductDivAI)
+
+        //i
+        var gbmBoughProductDivI = document.createElement("i")
+        gbmBoughProductDivI.id = "gbmBoughProductDivI"
+        gbmBoughProductDivI.class = "fas"
+        gbmBoughProductDivI.innerHTML = "&#xf060;"
+        gbmBookingProductDivAI.appendChild(gbmBoughProductDivI)
+    </script> 
+</body>
+</html>

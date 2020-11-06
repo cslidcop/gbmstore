@@ -1,0 +1,516 @@
+﻿    <!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="GbmStyle.css" />
+    <style>
+        body{
+            margin : 0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //gbmMasterDivHeader
+        var gbmMasterDivHeader = document.createElement("div")
+        gbmMasterDivHeader.id = "gbmMasterDivHeader"
+        gbmMasterDivHeader.style.background = "#191970"
+        gbmMasterDivHeader.style.width = "100%"
+        gbmMasterDivHeader.style.height = "10%"
+        gbmMasterDivHeader.style.position = "absolute"
+
+        var gbmTopMenuTable = document.createElement("table")
+        gbmTopMenuTable.id = "gbmTopMenuTable"
+        gbmTopMenuTable.style.borderSpacing = "12px"
+        gbmTopMenuTable.style.float = "right"
+        gbmTopMenuTable.style.marginRight = "2%"
+        gbmTopMenuTable.style.color = "white"
+        gbmTopMenuTable.style.textDecoration = "none"
+        gbmTopMenuTable.style.fontSize = "20px"
+        gbmTopMenuTable.style.fontFamily = "sans-serif"
+        gbmTopMenuTable.style.top = "11%"
+        gbmTopMenuTable.style.position = "relative"
+
+
+        var tbody = document.createElement("TBODY")
+        var tr = document.createElement("tr")
+
+        var tdHome = document.createElement("td")
+        var aHome = document.createElement("a")
+        aHome.href = "index.html"
+        aHome.innerText = "Home"
+        aHome.class = "gbmTopMenuTableLink"
+        aHome.style.color = "white"
+        aHome.style.textDecoration = "none"
+        tdHome.appendChild(aHome)
+
+        var tdProduct = document.createElement("td")
+        var aProduct = document.createElement("a")
+        aProduct.style.color = "white"
+        aProduct.style.textDecoration = "none"
+        aProduct.href = "All_product.html"
+        aProduct.innerText = "Our Products"
+        aProduct.class = "gbmTopMenuTableLink"
+        tdProduct.appendChild(aProduct)
+
+        var tdAboutUs = document.createElement("td")
+        var aAboutUs = document.createElement("a")
+        aAboutUs.href = "About-Us.html"
+        aAboutUs.innerText = "About Us"
+        aAboutUs.class = "gbmTopMenuTableLink"
+        aAboutUs.style.color = "white"
+        aAboutUs.style.textDecoration = "none"
+        tdAboutUs.appendChild(aAboutUs)
+
+        var tdContactUs = document.createElement("td")
+        var aContactUs = document.createElement("a")
+        aContactUs.href = "Contact-Us.html"
+        aContactUs.innerText = "Contact Us"
+        aContactUs.style.color = "white"
+        aContactUs.style.textDecoration = "none"
+        aContactUs.class = "gbmTopMenuTableLink"
+        tdContactUs.appendChild(aContactUs)
+
+
+        tr.appendChild(tdHome)
+        tr.appendChild(tdProduct)
+        tr.appendChild(tdAboutUs)
+        tr.appendChild(tdContactUs)
+        tbody.appendChild(tr)
+        gbmTopMenuTable.appendChild(tbody)
+        gbmMasterDivHeader.appendChild(gbmTopMenuTable)
+        document.body.appendChild(gbmMasterDivHeader)
+
+        //gbmMasterDivSideBar
+        var gbmMasterDivSideBar = document.createElement("div")
+        gbmMasterDivSideBar.id = "gbmMasterDivSideBar"
+        gbmMasterDivSideBar.style.background = "#4682B4"
+        gbmMasterDivSideBar.style.width = "10%"
+        gbmMasterDivSideBar.style.height = "90%"
+        gbmMasterDivSideBar.style.top = "10%"
+        gbmMasterDivSideBar.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivSideBar)
+
+        //gbmMasterDivContainer
+        var gbmMasterDivContainer = document.createElement("div")
+        gbmMasterDivContainer.id = "gbmMasterDivContainer"
+        gbmMasterDivContainer.style.background = "white"
+        gbmMasterDivContainer.style.width = "90%"
+        gbmMasterDivContainer.style.height = "90%"
+        gbmMasterDivContainer.style.left = "10%"
+        gbmMasterDivContainer.style.top = "10%"
+        gbmMasterDivContainer.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivContainer)
+
+        //--------div for form------------------------------
+        var gbmPaymentFormPackage = document.createElement("div")
+        gbmPaymentFormPackage.id = "gbmPaymentFormPackage"
+        gbmPaymentFormPackage.style.width = "60%"
+        gbmPaymentFormPackage.style.float = "left"
+        gbmPaymentFormPackage.style.position = "relative"
+        gbmMasterDivContainer.appendChild(gbmPaymentFormPackage)
+        //-----------*-----------------------------\
+        //==>gbmPaymentFormDiv
+        var gbmPaymentFormDiv = document.createElement("form")
+        gbmPaymentFormDiv.id = "gbmPaymentFormDiv"
+        gbmPaymentFormDiv.style.width = "50%"
+        gbmPaymentFormDiv.style.height = "80%"
+        gbmPaymentFormDiv.style.position = "relative"
+        gbmPaymentFormDiv.style.left = "10%"
+        gbmPaymentFormDiv.style.top = "10%"
+        gbmPaymentFormPackage.appendChild(gbmPaymentFormDiv)
+        //===>gbmPaymentTitleForm
+        var gbmPaymentTitleForm = document.createElement("h2")
+        gbmPaymentTitleForm.id = "gbmPaymentTitleForm"
+        gbmPaymentTitleForm.style.textAlign = "center"
+        gbmPaymentTitleForm.style.width = "100%"
+        gbmPaymentTitleForm.style.left = "10%"
+        gbmPaymentTitleForm.innerHTML = "Payment Gateaway"
+        gbmPaymentFormDiv.appendChild(gbmPaymentTitleForm)
+        //===>gbmPaymentLnameDiv
+        var gbmPaymentLnameDiv = document.createElement("div")
+        gbmPaymentLnameDiv.id = "gbmPaymentLnameDiv"
+        gbmPaymentLnameDiv.style.width = "45%"
+        gbmPaymentLnameDiv.style.height = "relative"
+        gbmPaymentLnameDiv.style.float = "left"
+        gbmPaymentLnameDiv.style.marginRight = "5%"
+        gbmPaymentFormDiv.appendChild(gbmPaymentLnameDiv)
+
+        //==>gbmPaymentLnameLbl
+        var gbmPaymentLnameLbl = document.createElement("label")
+        gbmPaymentLnameLbl.id = "gbmPaymentLnameLbl"
+        gbmPaymentLnameLbl.innerHTML = "Last Name<br>"
+        gbmPaymentLnameDiv.appendChild(gbmPaymentLnameLbl)
+
+        //==>gbmPaymentLnameInput
+        var gbmPaymentLnameInput = document.createElement("input")
+        gbmPaymentLnameInput.id = "gbmPaymentLnameInput"
+        gbmPaymentLnameInput.style.width = "100%"
+        gbmPaymentLnameInput.style.position = "relative"
+        gbmPaymentLnameDiv.appendChild(gbmPaymentLnameInput)
+
+        //----fname------
+        var gbmPaymentFnameDiv = document.createElement("div")
+        gbmPaymentFnameDiv.id = "gbmPaymentFnameDiv"
+        gbmPaymentFnameDiv.style.width = "45%"
+        gbmPaymentFnameDiv.style.position = "relative"
+        gbmPaymentFnameDiv.style.float = "right"
+        gbmPaymentFnameDiv.style.marginLeft = "5%"
+        gbmPaymentFormDiv.appendChild(gbmPaymentFnameDiv)
+
+        //==>gbmPaymentFnameLbl
+        var gbmPaymentFnameLbl = document.createElement("label")
+        gbmPaymentFnameLbl.id = "gbmPaymentFnameLbl"
+        gbmPaymentFnameLbl.innerHTML = "First Name<br>"
+        gbmPaymentFnameDiv.appendChild(gbmPaymentFnameLbl)
+
+        //==>gbmPaymentFnameInput
+        var gbmPaymentFnameInput = document.createElement("input")
+        gbmPaymentFnameInput.id = "gbmPaymentFnameInput"
+        gbmPaymentFnameInput.style.width = "100%"
+        gbmPaymentFnameDiv.appendChild(gbmPaymentFnameInput)
+
+        //===>gbmPaymentAddressDiv
+        var gbmPaymentAddressDiv = document.createElement('div')
+        gbmPaymentAddressDiv.id = "gbmPaymentAddressDiv"
+        gbmPaymentAddressDiv.style.width = "100%"
+        gbmPaymentAddressDiv.style.height = "100%"
+        gbmPaymentAddressDiv.style.display = "block"
+        gbmPaymentFormDiv.appendChild(gbmPaymentAddressDiv)
+
+        //====>gbmPaymentAddressLbl
+        var gbmPaymentAddressLbl = document.createElement("label")
+        gbmPaymentAddressLbl.id = "gbmPaymentAddressLbl"
+        gbmPaymentAddressLbl.innerHTML = "Address<br>"
+        gbmPaymentAddressDiv.appendChild(gbmPaymentAddressLbl)
+
+        //===>gbmPaymentAddressInput
+        var gbmPaymentAddressInput = document.createElement("textarea")
+        gbmPaymentAddressInput.id = "gbmPaymentAddressInput"
+        gbmPaymentAddressInput.style.width = "100%"
+        gbmPaymentAddressDiv.appendChild(gbmPaymentAddressInput)
+
+        //===>gbmPaymentCityDiv
+        var gbmPaymentCityDiv = document.createElement('div')
+        gbmPaymentCityDiv.id = "gbmPaymentCityDiv"
+        gbmPaymentFormDiv.appendChild(gbmPaymentCityDiv)
+
+        //====>gbmPaymentCityLbl
+        var gbmPaymentCityLbl = document.createElement("label")
+        gbmPaymentCityLbl.id = "gbmPaymentCityLbl"
+        gbmPaymentCityLbl.innerHTML = "City<br>"
+        gbmPaymentCityDiv.appendChild(gbmPaymentCityLbl)
+
+        //===>gbmPaymentCityInput
+        var gbmPaymentCityInput = document.createElement("input")
+        gbmPaymentCityInput.id = "gbmPaymentCityInput"
+        gbmPaymentCityInput.style.width = "100%"
+        gbmPaymentCityDiv.appendChild(gbmPaymentCityInput)
+
+        //===>gbmPaymentCountryDiv
+        var gbmPaymentCountryDiv = document.createElement("div")
+        gbmPaymentCountryDiv.id = "gbmPaymentCountryDiv"
+        gbmPaymentCountryDiv.style.width = "45%"
+        gbmPaymentCountryDiv.style.height = "relative"
+        gbmPaymentCountryDiv.style.float = "left"
+        gbmPaymentCountryDiv.style.marginRight = "5%"
+        gbmPaymentFormDiv.appendChild(gbmPaymentCountryDiv)
+
+        //==>gbmPaymentCountryLbl
+        var gbmPaymentCountryLbl = document.createElement("label")
+        gbmPaymentCountryLbl.id = "gbmPaymentCountryLbl"
+        gbmPaymentCountryLbl.innerHTML = "Country<br>"
+        gbmPaymentCountryDiv.appendChild(gbmPaymentCountryLbl)
+
+        //==>gbmPaymentCountryInput
+        var gbmPaymentCountryInput = document.createElement("input")
+        gbmPaymentCountryInput.id = "gbmPaymentCountryInput"
+        gbmPaymentCountryInput.style.width = "100%"
+        gbmPaymentCountryInput.style.position = "relative"
+        gbmPaymentCountryDiv.appendChild(gbmPaymentCountryInput)
+
+        //----zip------
+        var gbmPaymentZipDiv = document.createElement("div")
+        gbmPaymentZipDiv.id = "gbmPaymentZipDiv"
+        gbmPaymentZipDiv.style.width = "45%"
+        gbmPaymentZipDiv.style.position = "relative"
+        gbmPaymentZipDiv.style.float = "right"
+        gbmPaymentZipDiv.style.marginLeft = "5%"
+        gbmPaymentFormDiv.appendChild(gbmPaymentZipDiv)
+
+        //==>gbmPaymentZipLbl
+        var gbmPaymentZipLbl = document.createElement("label")
+        gbmPaymentZipLbl.id = "gbmPaymentZipLbl"
+        gbmPaymentZipLbl.innerHTML = "Zip Code"
+        gbmPaymentZipDiv.appendChild(gbmPaymentZipLbl)
+
+        //==>gbmPaymentZipInput
+        var gbmPaymentZipInput = document.createElement("input")
+        gbmPaymentZipInput.id = "gbmPaymentZipInput"
+        gbmPaymentZipInput.style.width = "100%"
+        gbmPaymentZipDiv.appendChild(gbmPaymentZipInput)
+
+        //-----------gbmPaymentEmailDiv
+        var gbmPaymentEmailDiv = document.createElement("div")
+        gbmPaymentEmailDiv.id = "gbmPaymentEmailDiv"
+        gbmPaymentEmailDiv.style.width = "45%"
+        gbmPaymentEmailDiv.style.position = "relative"
+        gbmPaymentEmailDiv.style.float = "left"
+        gbmPaymentEmailDiv.marginRight = "5%"
+        gbmPaymentFormDiv.appendChild(gbmPaymentEmailDiv)
+
+        //gbmPaymentEmailLbl
+        var gbmPaymentEmailLbl = document.createElement("label")
+        gbmPaymentEmailLbl.id = "gbmPaymentEmailLbl"
+        gbmPaymentEmailLbl.innerHTML = "Email<br>"
+        gbmPaymentEmailDiv.appendChild(gbmPaymentEmailLbl)
+
+        //gbmPaymentEmailInput
+        var gbmPaymentEmailInput = document.createElement("input")
+        gbmPaymentEmailInput.id = "gbmPaymentEmailInput"
+        gbmPaymentEmailInput.style.width = "100%"
+        gbmPaymentEmailDiv.appendChild(gbmPaymentEmailInput)
+
+        //------------------------------
+        //-----------gbmPaymentPhoneDiv
+        var gbmPaymentPhoneDiv = document.createElement("div")
+        gbmPaymentPhoneDiv.id = "gbmPaymentPhoneDiv"
+        gbmPaymentPhoneDiv.style.width = "45%"
+        gbmPaymentPhoneDiv.style.position = "relative"
+        gbmPaymentPhoneDiv.style.float = "right"
+        gbmPaymentPhoneDiv.marginLeft = "5%"
+        gbmPaymentFormDiv.appendChild(gbmPaymentPhoneDiv)
+
+        //gbmPaymentPhoneLbl
+        var gbmPaymentPhoneLbl = document.createElement("label")
+        gbmPaymentPhoneLbl.id = "gbmPaymentPhoneLbl"
+        gbmPaymentPhoneLbl.innerHTML = "Phone<br>"
+        gbmPaymentPhoneDiv.appendChild(gbmPaymentPhoneLbl)
+
+        //gbmPaymentPhoneInput
+        var gbmPaymentPhoneInput = document.createElement("input")
+        gbmPaymentPhoneInput.id = "gbmPaymentPhoneInput"
+        gbmPaymentPhoneInput.style.width = "100%"
+        gbmPaymentPhoneDiv.appendChild(gbmPaymentPhoneInput)
+
+
+
+
+
+        //---------*-------------
+        var gbmYourOrderDiv = document.createElement("div")
+        gbmYourOrderDiv.id = "gbmYourOrderDiv"
+        gbmYourOrderDiv.style.position = "relative"
+        gbmYourOrderDiv.style.width = "40%"
+        gbmYourOrderDiv.style.height = "2%"
+        gbmYourOrderDiv.style.float = "right"
+        gbmMasterDivContainer.appendChild(gbmYourOrderDiv)
+
+        //=>gbmYourOrderTitle
+        var gbmYourOrderTitle = document.createElement("h2")
+        gbmYourOrderTitle.id = "gbmYourOrderTitle"
+        gbmYourOrderTitle.style.left = "5%"
+        gbmYourOrderTitle.style.position = "relative"
+        gbmYourOrderTitle.innerHTML = "Your Order"
+        gbmYourOrderDiv.appendChild(gbmYourOrderTitle)
+
+        //=>gbmYourOrderTable
+        var gbmYourOrderTable = document.createElement("table")
+        gbmYourOrderTable.id = 'gbmYourOrderTable'
+        gbmYourOrderTable.style.border = "1px solid black"
+        gbmYourOrderTable.style.borderCollapse = "Collapse"
+        gbmYourOrderTable.style.width = "40%"
+        gbmYourOrderTable.style.position = "relative"
+        gbmYourOrderTable.style.left = "5%"
+        gbmYourOrderTable.style.textAlign = "center"
+        gbmYourOrderDiv.appendChild(gbmYourOrderTable)
+
+        //==>gbmYourOrderTr1
+        var gbmYourOrderTr1 = document.createElement("tr")
+        gbmYourOrderTr1.id = "gbmYourOrderTr1"
+        gbmYourOrderTr1.style.backgroundColor = '#dddddd'
+        gbmYourOrderTr1.style.color = "white"
+        gbmYourOrderTable.appendChild(gbmYourOrderTr1)
+        
+        //===>gbmYourOrderTh1
+        var gbmYourOrderTh1 = document.createElement("th")
+        gbmYourOrderTh1.id = "gbmYourOrderTh1"
+        gbmYourOrderTh1.innerHTML = "Item"
+        gbmYourOrderTr1.appendChild(gbmYourOrderTh1)
+    
+        //===>gbmYourOrderTh2
+        var gbmYourOrderTh2 = document.createElement("th")
+        gbmYourOrderTh2.id = "gbmYourOrderTh2"
+        gbmYourOrderTh2.innerHTML = "Price"
+        gbmYourOrderTr1.appendChild(gbmYourOrderTh2)
+
+        //===>gbmYourOrderTh3
+        var gbmYourOrderTh3 = document.createElement("th")
+        gbmYourOrderTh3.id = "gbmYourOrderTh3"
+        gbmYourOrderTh3.innerHTML = "Total"
+        gbmYourOrderTr1.appendChild(gbmYourOrderTh3)
+
+        //*-----tr2
+        //==>gbmYourOrderTr
+        var gbmYourOrderTr3 = document.createElement("tr")
+        gbmYourOrderTr3.id = "gbmYourOrderTr3"
+        gbmYourOrderTable.appendChild(gbmYourOrderTr3)
+
+        //===>gbmYourOrderTd4
+        var gbmYourOrderTd4 = document.createElement("td")
+        gbmYourOrderTd4.id = "gbmYourOrderTd4"
+        gbmYourOrderTd4.innerText = "----"
+        gbmYourOrderTr3.appendChild(gbmYourOrderTd4)
+
+        //===>gbmYourOrderTd5
+        var gbmYourOrderTd5 = document.createElement("td")
+        gbmYourOrderTd5.id = "gbmYourOrderTd5"
+        gbmYourOrderTd5.innerText = "------"
+        gbmYourOrderTr3.appendChild(gbmYourOrderTd5)
+
+        //===>gbmYourOrderTd6
+        var gbmYourOrderTd6 = document.createElement("td")
+        gbmYourOrderTd6.id = "gbmYourOrderTd6"
+        gbmYourOrderTd6.innerText = "------"
+        gbmYourOrderTr3.appendChild(gbmYourOrderTd6)
+
+        //--------tr4
+        //==>gbmYourOrderTr4
+        var gbmYourOrderTr4 = document.createElement("tr")
+        gbmYourOrderTr4.id = "gbmYourOrderTr4"
+        gbmYourOrderTable.appendChild(gbmYourOrderTr4)
+
+        //===>gbmYourOrderTd7
+        var gbmYourOrderTd7 = document.createElement("td")
+        gbmYourOrderTd7.id = "gbmYourOrderTd7"
+        gbmYourOrderTd7.innerText = "------"
+        gbmYourOrderTr4.appendChild(gbmYourOrderTd7)
+
+        //===>gbmYourOrderTd8
+        var gbmYourOrderTd8 = document.createElement("td")
+        gbmYourOrderTd8.id = "gbmYourOrderTd8"
+        gbmYourOrderTd8.innerText = "----"
+        gbmYourOrderTr4.appendChild(gbmYourOrderTd8)
+
+        //===>gbmYourOrderTd9
+        var gbmYourOrderTd9 = document.createElement("td")
+        gbmYourOrderTd9.id = "gbmYourOrderTd9"
+        gbmYourOrderTd9.innerText = "----"
+        gbmYourOrderTr4.appendChild(gbmYourOrderTd9)
+    
+
+        //*-----third div
+        var gbmYourOrderInformationDiv = document.createElement("div")
+        gbmYourOrderInformationDiv.id = "gbmYourOrderInformationDiv"
+        gbmYourOrderInformationDiv.style.position = "relative"
+        gbmYourOrderInformationDiv.style.width = "40%"
+        gbmYourOrderInformationDiv.style.left = "5%"
+        gbmYourOrderInformationDiv.float = "right"
+        gbmYourOrderDiv.appendChild(gbmYourOrderInformationDiv)
+
+        //gbmYourOrderDirectBank
+        var gbmYourOrderDirectBank = document.createElement("input")
+        gbmYourOrderDirectBank.id = 'gbmYourOrderDirectBank'
+        gbmYourOrderDirectBank.setAttribute("type", "radio")
+        gbmYourOrderDirectBank.value = "Direct Bank Transfert"
+        gbmYourOrderInformationDiv.appendChild(gbmYourOrderDirectBank)
+
+        //gbmYourOrderLbl
+        var gbmYourOrderLbl = document.createElement("label")
+        gbmYourOrderLbl.id = "gbmYourOrderLbl"
+        gbmYourOrderLbl.innerHTML = "Direct Bank Transfert<br>"
+        gbmYourOrderInformationDiv.appendChild(gbmYourOrderLbl)
+
+        //-----*-------------
+        //gbmYourOrderChequePayment
+        var gbmYourOrderChequePayment = document.createElement("input")
+        gbmYourOrderChequePayment.id = 'gbmYourOrderChequePayment'
+        gbmYourOrderChequePayment.setAttribute("type", "radio")
+        gbmYourOrderChequePayment.value = "Cheque Payment"
+        gbmYourOrderInformationDiv.appendChild(gbmYourOrderChequePayment)
+
+        //gbmYourOrderChequePaymentLbl
+        var gbmYourOrderChequePaymentLbl = document.createElement("label")
+        gbmYourOrderChequePaymentLbl.id = "gbmYourOrderChequePaymentLbl"
+        gbmYourOrderChequePaymentLbl.innerHTML = "Cheque Payment<br>"
+        gbmYourOrderInformationDiv.appendChild(gbmYourOrderChequePaymentLbl)
+    
+        //gbmYourOrderCredit
+        var gbmYourOrderCredit = document.createElement("input")
+        gbmYourOrderCredit.id = 'gbmYourOrderCredit'
+        gbmYourOrderCredit.setAttribute("type", "radio")
+        gbmYourOrderCredit.setAttribute("name", "Credit Card")
+        gbmYourOrderCredit.value = "Credit"
+        gbmYourOrderInformationDiv.appendChild(gbmYourOrderCredit)
+
+        //gbmYourOrderCreditLbl
+        var gbmYourOrderCreditLbl = document.createElement("label")
+        gbmYourOrderCreditLbl.id = "gbmYourOrderCreditLbl"
+        gbmYourOrderCreditLbl.innerText = "Credit"
+        gbmYourOrderInformationDiv.appendChild(gbmYourOrderCreditLbl)
+
+        //gbmYourOrderInformationDiv2
+        var gbmYourOrderInformationDiv2 = document.createElement("div")
+        gbmYourOrderInformationDiv2.id = "gbmYourOrderInformationDiv2"
+        gbmYourOrderInformationDiv2.style.padding = "8px"
+        gbmYourOrderInformationDiv2.style.width = "283px"
+        gbmYourOrderInformationDiv2.innerHTML = "<p>Pay Securely using Your Credit Card</p>"
+        gbmYourOrderInformationDiv2.style.backgroundColor = "#dddddd"
+        gbmYourOrderInformationDiv.appendChild(gbmYourOrderInformationDiv2)
+
+        //**********gbmYourOrderInformationh3**************
+        var gbmYourOrderInformationh3 = document.createElement("h3")
+        gbmYourOrderInformationh3.id = "gbmYourOrderInformationh3"
+        gbmYourOrderInformationh3.innerHTML = "<h3>TEST MODE ENABLED</h3>"
+        gbmYourOrderInformationDiv2.appendChild(gbmYourOrderInformationh3)
+
+        //gbmYourOrderInformationDiv2Lbl
+        var gbmYourOrderInformationDiv2Lbl = document.createElement("label")
+        gbmYourOrderInformationDiv2Lbl.id = "gbmYourOrderInformationDiv2Lbl"
+        gbmYourOrderInformationDiv2Lbl.innerHTML = "Credit Card Number<br>"
+        gbmYourOrderInformationDiv2.appendChild(gbmYourOrderInformationDiv2Lbl)
+    
+        //gbmYourOrderInformationDiv2Input
+        var gbmYourOrderInformationDiv2Input = document.createElement("input")
+        gbmYourOrderInformationDiv2Input.id = "gbmYourOrderInformationDiv2Input"
+        gbmYourOrderInformationDiv2Input.setAttribute("placeholder", "4000790058")
+        gbmYourOrderInformationDiv2.appendChild(gbmYourOrderInformationDiv2Input)
+    
+        //gbmYourOrderInformationDiv2Lbl2
+        var gbmYourOrderInformationDiv2Lbl2 = document.createElement("label")
+        gbmYourOrderInformationDiv2Lbl2.id = "gbmYourOrderInformationDiv2Lbl2"
+        gbmYourOrderInformationDiv2Lbl2.innerHTML = "<br>Card Security<br>"
+        gbmYourOrderInformationDiv2.appendChild(gbmYourOrderInformationDiv2Lbl2)
+
+        //gbmYourOrderInformationDiv2Input2
+        var gbmYourOrderInformationDiv2Input2 = document.createElement("input")
+        gbmYourOrderInformationDiv2Input2.id = "gbmYourOrderInformationDiv2Input2"
+        gbmYourOrderInformationDiv2Input2.setAttribute("placeholder", "123")
+        gbmYourOrderInformationDiv2.appendChild(gbmYourOrderInformationDiv2Input2)
+
+        //gbmYourOrderSubmitBtn
+        var gbmYourOrderSubmitBtn = document.createElement("div")
+        gbmYourOrderSubmitBtn.id = "gbmYourOrderSubmitBtn"
+        gbmYourOrderSubmitBtn.style.position = "relative"
+        gbmYourOrderSubmitBtn.style.top = "102%"
+        gbmYourOrderSubmitBtn.style.left = "5%"
+        gbmYourOrderDiv.appendChild(gbmYourOrderSubmitBtn)
+
+        //gbmYourOrderButtonInput
+        var gbmYourOrderButtonInput = document.createElement("input")
+        gbmYourOrderButtonInput.id = "gbmYourOrderButtonInput"
+        gbmYourOrderButtonInput.setAttribute("type", "Submit")
+        gbmYourOrderButtonInput.setAttribute("value", "Place Order")
+        gbmYourOrderButtonInput.style.width = "40%"
+        gbmYourOrderButtonInput.style.position = "relative"
+        gbmYourOrderButtonInput.style.height = "20%"
+        gbmYourOrderButtonInput.style.backgroundColor = "#666666"
+        gbmYourOrderButtonInput.style.cursor = "pointer"
+        gbmYourOrderButtonInput.style.color = "white"
+        gbmYourOrderSubmitBtn.appendChild(gbmYourOrderButtonInput)
+
+    </script>    
+</body>
+</html>
