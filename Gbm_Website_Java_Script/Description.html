@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Description</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="GbmStyle.css" />
+    <style>
+
+    *{
+        margin : 0;
+        padding: 0;
+    }
+    </style>
+</head>
+<body>
+    <script>
+        //gbmMasterDivHeader
+        var gbmMasterDivHeader = document.createElement("div")
+        gbmMasterDivHeader.id = "gbmMasterDivHeader"
+        gbmMasterDivHeader.style.background = "#191970"
+        gbmMasterDivHeader.style.width = "100%"
+        gbmMasterDivHeader.style.height = "10%"
+        gbmMasterDivHeader.style.position = "absolute"
+
+        var gbmTopMenuTable = document.createElement("table")
+        gbmTopMenuTable.id = "gbmTopMenuTable"
+        gbmTopMenuTable.style.borderSpacing = "12px"
+        gbmTopMenuTable.style.float = "right"
+        gbmTopMenuTable.style.marginRight = "2%"
+        gbmTopMenuTable.style.color = "white"
+        gbmTopMenuTable.style.textDecoration = "none"
+        gbmTopMenuTable.style.fontSize = "20px"
+        gbmTopMenuTable.style.fontFamily = "sans-serif"
+        gbmTopMenuTable.style.top = "11%"
+        gbmTopMenuTable.style.position = "relative"
+
+
+        var tbody = document.createElement("TBODY")
+        var tr = document.createElement("tr")
+
+        var tdHome = document.createElement("td")
+        var aHome = document.createElement("a")
+        aHome.href = "index.html"
+        aHome.innerText = "Home"
+        aHome.class = "gbmTopMenuTableLink"
+        aHome.style.color = "white"
+        aHome.style.textDecoration = "none"
+        tdHome.appendChild(aHome)
+
+        var tdProduct = document.createElement("td")
+        var aProduct = document.createElement("a")
+        aProduct.style.color = "white"
+        aProduct.style.textDecoration = "none"
+        aProduct.href = "All_product.html"
+        aProduct.innerText = "Our Products"
+        aProduct.class = "gbmTopMenuTableLink"
+        tdProduct.appendChild(aProduct)
+
+        var tdAboutUs = document.createElement("td")
+        var aAboutUs = document.createElement("a")
+        aAboutUs.href = "About-Us.html"
+        aAboutUs.innerText = "About Us"
+        aAboutUs.class = "gbmTopMenuTableLink"
+        aAboutUs.style.color = "white"
+        aAboutUs.style.textDecoration = "none"
+        tdAboutUs.appendChild(aAboutUs)
+
+        var tdContactUs = document.createElement("td")
+        var aContactUs = document.createElement("a")
+        aContactUs.href = "Contact-Us.html"
+        aContactUs.innerText = "Contact Us"
+        aContactUs.style.color = "white"
+        aContactUs.style.textDecoration = "none"
+        aContactUs.class = "gbmTopMenuTableLink"
+        tdContactUs.appendChild(aContactUs)
+
+
+        tr.appendChild(tdHome)
+        tr.appendChild(tdProduct)
+        tr.appendChild(tdAboutUs)
+        tr.appendChild(tdContactUs)
+        tbody.appendChild(tr)
+        gbmTopMenuTable.appendChild(tbody)
+        gbmMasterDivHeader.appendChild(gbmTopMenuTable)
+        document.body.appendChild(gbmMasterDivHeader)
+
+        //gbmMasterDivSideBar
+        var gbmMasterDivSideBar = document.createElement("div")
+        gbmMasterDivSideBar.id = "gbmMasterDivSideBar"
+        gbmMasterDivSideBar.style.background = "#4682B4"
+        gbmMasterDivSideBar.style.width = "10%"
+        gbmMasterDivSideBar.style.height = "90%"
+        gbmMasterDivSideBar.style.top = "10%"
+        gbmMasterDivSideBar.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivSideBar)
+
+        //gbmMasterDivContainer
+        var gbmMasterDivContainer = document.createElement("div")
+        gbmMasterDivContainer.id = "gbmMasterDivContainer"
+        gbmMasterDivContainer.style.background = "white"
+        gbmMasterDivContainer.style.width = "90%"
+        gbmMasterDivContainer.style.height = "90%"
+        gbmMasterDivContainer.style.left = "10%"
+        gbmMasterDivContainer.style.top = "10%"
+        gbmMasterDivContainer.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivContainer)
+
+        //=>gbmDescriptionImageBtnDiv
+        var gbmDescriptionImageBtnDiv = document.createElement("div")
+        gbmDescriptionImageBtnDiv.id = "gbmDescriptionImageBtnDiv"
+        gbmDescriptionImageBtnDiv.style.width = "50%"
+        gbmDescriptionImageBtnDiv.style.height = "90%"
+        gbmDescriptionImageBtnDiv.style.position = "relative"
+        gbmDescriptionImageBtnDiv.style.float = "left"
+        gbmDescriptionImageBtnDiv.style.top = "10%"
+        gbmMasterDivContainer.appendChild(gbmDescriptionImageBtnDiv)
+
+        //==>gbmDescriptionImageDiv
+        var gbmDescriptionImageDiv = document.createElement("img")
+        gbmDescriptionImageDiv.id = "gbmDescriptionImageDiv"
+        gbmDescriptionImageDiv.style.width = "70%"
+        gbmDescriptionImageDiv.style.height = "50%"
+        gbmDescriptionImageDiv.style.position = "relative"
+        gbmDescriptionImageDiv.style.left = "25%"
+        gbmDescriptionImageDiv.src = "img/cool.jpg"
+        gbmDescriptionImageBtnDiv.appendChild(gbmDescriptionImageDiv)
+
+        //==>gbmButtonDescriptionDiv
+        var gbmButtonDescriptionDiv = document.createElement("button")
+        gbmButtonDescriptionDiv.id = "gbmButtonDescriptionDiv"
+        gbmButtonDescriptionDiv.type = "submit"
+        gbmButtonDescriptionDiv.style.cursor = "pointer"
+        gbmButtonDescriptionDiv.innerHTML = "Buy Now"
+        gbmButtonDescriptionDiv.style.width = "70%"
+        gbmButtonDescriptionDiv.style.height = "10%"
+        gbmButtonDescriptionDiv.style.position = "relative"
+        gbmButtonDescriptionDiv.style.left = "25%"
+        gbmDescriptionImageBtnDiv.appendChild(gbmButtonDescriptionDiv)
+
+        //=>gbmDescriptionSpnDiv
+        var gbmDescriptionSpnDiv = document.createElement("div")
+        gbmDescriptionSpnDiv.id = "gbmDescriptionSpnDiv"
+        gbmDescriptionSpnDiv.style.width = "50%"
+        gbmDescriptionSpnDiv.style.height = "90%"
+        gbmDescriptionSpnDiv.style.position = "relative"
+        gbmDescriptionSpnDiv.style.float = "right"
+        gbmDescriptionSpnDiv.style.top = "10%"
+        gbmMasterDivContainer.appendChild(gbmDescriptionSpnDiv)
+
+        //==>gbmDescriptionDivSpn
+        var gbmDescriptionDivSpn = document.createElement("div")
+        gbmDescriptionDivSpn.id = "gbmDescriptionDivSpn"
+        gbmDescriptionDivSpn.style.width = "70%"
+        gbmDescriptionDivSpn.style.height = "60%"
+        gbmDescriptionDivSpn.style.position = "relative"
+        gbmDescriptionDivSpn.style.fontSize = "25px"
+        gbmDescriptionDivSpn.innerHTML = "<span><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popula rised in the 1960s with the release of Let raset sheets containing Lorem</span>"
+        gbmDescriptionSpnDiv.appendChild(gbmDescriptionDivSpn)
+
+        //===>gbmDescriptionSpan
+
+    </script>
+</body>
+</html>

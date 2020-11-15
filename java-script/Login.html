@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="GbmStyle.css" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //gbmMasterDivHeader
+        var gbmMasterDivHeader = document.createElement("div")
+        gbmMasterDivHeader.id = "gbmMasterDivHeader"
+        gbmMasterDivHeader.style.background = "#191970"
+        gbmMasterDivHeader.style.width = "100%"
+        gbmMasterDivHeader.style.height = "10%"
+        gbmMasterDivHeader.style.position = "absolute"
+
+        var gbmTopMenuTable = document.createElement("table")
+        gbmTopMenuTable.id = "gbmTopMenuTable"
+        gbmTopMenuTable.style.borderSpacing = "12px"
+        gbmTopMenuTable.style.float = "right"
+        gbmTopMenuTable.style.marginRight = "2%"
+        gbmTopMenuTable.style.color = "white"
+        gbmTopMenuTable.style.textDecoration = "none"
+        gbmTopMenuTable.style.fontSize = "20px"
+        gbmTopMenuTable.style.fontFamily = "sans-serif"
+        gbmTopMenuTable.style.top = "11%"
+        gbmTopMenuTable.style.position = "relative"
+
+
+        var tbody = document.createElement("TBODY")
+        var tr = document.createElement("tr")
+
+        var tdHome = document.createElement("td")
+        var aHome = document.createElement("a")
+        aHome.href = "index.html"
+        aHome.innerText = "Home"
+        aHome.class = "gbmTopMenuTableLink"
+        aHome.style.color = "white"
+        aHome.style.textDecoration = "none"
+        tdHome.appendChild(aHome)
+
+        var tdProduct = document.createElement("td")
+        var aProduct = document.createElement("a")
+        aProduct.style.color = "white"
+        aProduct.style.textDecoration = "none"
+        aProduct.href = "All_product.html"
+        aProduct.innerText = "Our Products"
+        aProduct.class = "gbmTopMenuTableLink"
+        tdProduct.appendChild(aProduct)
+
+        var tdAboutUs = document.createElement("td")
+        var aAboutUs = document.createElement("a")
+        aAboutUs.href = "About-Us.html"
+        aAboutUs.innerText = "About Us"
+        aAboutUs.class = "gbmTopMenuTableLink"
+        aAboutUs.style.color = "white"
+        aAboutUs.style.textDecoration = "none"
+        tdAboutUs.appendChild(aAboutUs)
+
+        var tdContactUs = document.createElement("td")
+        var aContactUs = document.createElement("a")
+        aContactUs.href = "Contact-Us.html"
+        aContactUs.innerText = "Contact Us"
+        aContactUs.style.color = "white"
+        aContactUs.style.textDecoration = "none"
+        aContactUs.class = "gbmTopMenuTableLink"
+        tdContactUs.appendChild(aContactUs)
+
+
+        tr.appendChild(tdHome)
+        tr.appendChild(tdProduct)
+        tr.appendChild(tdAboutUs)
+        tr.appendChild(tdContactUs)
+        tbody.appendChild(tr)
+        gbmTopMenuTable.appendChild(tbody)
+        gbmMasterDivHeader.appendChild(gbmTopMenuTable)
+        document.body.appendChild(gbmMasterDivHeader)
+
+        //gbmMasterDivSideBar
+        var gbmMasterDivSideBar = document.createElement("div")
+        gbmMasterDivSideBar.id = "gbmMasterDivSideBar"
+        gbmMasterDivSideBar.style.background = "#4682B4"
+        gbmMasterDivSideBar.style.width = "10%"
+        gbmMasterDivSideBar.style.height = "90%"
+        gbmMasterDivSideBar.style.top = "10%"
+        gbmMasterDivSideBar.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivSideBar)
+
+        //gbmMasterDivContainer
+        var gbmMasterDivContainer = document.createElement("div")
+        gbmMasterDivContainer.id = "gbmMasterDivContainer"
+        gbmMasterDivContainer.style.background = "white"
+        gbmMasterDivContainer.style.width = "90%"
+        gbmMasterDivContainer.style.height = "90%"
+        gbmMasterDivContainer.style.left = "10%"
+        gbmMasterDivContainer.style.top = "10%"
+        gbmMasterDivContainer.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivContainer)
+
+        //gbmLoginDiv
+        var gbmLoginDiv = document.createElement("div")
+        gbmLoginDiv.id = "gbmLoginDiv"
+        gbmLoginDiv.style.width = "30%"
+        gbmLoginDiv.style.height = "50%"
+        gbmLoginDiv.style.top = "12%"
+        gbmLoginDiv.style.marginLeft = "35%"
+        gbmLoginDiv.style.position = "relative"
+        gbmLoginDiv.style.display = "grid"
+        gbmLoginDiv.style.boxShadow = "0 0 3px rgb(0, 0, 0, 0.1)"
+        gbmLoginDiv.style.fontFamily = "sans-serif"
+        gbmMasterDivContainer.appendChild(gbmLoginDiv)
+
+        //gbmLoginFormDiv
+        var gbmLoginFormDiv = document.createElement("form")
+        gbmLoginFormDiv.id = "gbmLoginFormDiv"
+        gbmLoginFormDiv.style.width = "100%"
+        gbmLoginFormDiv.style.height = "100%"
+        gbmLoginFormDiv.style.position = "relative"
+        gbmLoginFormDiv.style.top = "10%"
+        gbmLoginDiv.appendChild(gbmLoginFormDiv)
+
+        //=>gbmLoginUnamesectionDiv
+        var gbmLoginUnamesectionDiv = document.createElement("div")
+        gbmLoginUnamesectionDiv.id = "gbmLoginUnamesectionDiv"
+        gbmLoginUnamesectionDiv.style.width = "80%"
+        gbmLoginUnamesectionDiv.style.height = "60%"
+        gbmLoginUnamesectionDiv.style.marginLeft = "8%"
+        gbmLoginUnamesectionDiv.style.fontSize = "23px"
+        gbmLoginUnamesectionDiv.style.position = "relative"
+        gbmLoginUnamesectionDiv.style.color = "#8a8686"
+        gbmLoginFormDiv.appendChild(gbmLoginUnamesectionDiv)
+
+        //==>gbmLoginUsernameLblDiv//label
+        var gbmLoginUsernameLblDiv = document.createElement("label")
+        gbmLoginUsernameLblDiv.id = "gbmLoginUsernameLblDiv"
+        gbmLoginUsernameLblDiv.innerHTML = "Username<br>"
+        gbmLoginUnamesectionDiv.appendChild(gbmLoginUsernameLblDiv)
+
+        //==>gbmLoginUsernameInputDiv//input
+        var gbmLoginUsernameInputDiv = document.createElement("input")
+        gbmLoginUsernameInputDiv.id = "gbmLoginUsernameInputDiv"
+        gbmLoginUsernameInputDiv.type = "text"
+        gbmLoginUsernameInputDiv.style.width = "100%"
+        gbmLoginUsernameInputDiv.style.height = "20%"
+        gbmLoginUnamesectionDiv.appendChild(gbmLoginUsernameInputDiv)
+        
+
+        //gbmLoginPasswordSectionDiv
+        var gbmLoginPasswordSectionDiv = document.createElement("div")
+        gbmLoginPasswordSectionDiv.id = "gbmLoginPasswordSectionDiv"
+        gbmLoginPasswordSectionDiv.style.width = "80%"
+        gbmLoginPasswordSectionDiv.style.position = "relative"
+        gbmLoginPasswordSectionDiv.style.height = "60%"
+        gbmLoginPasswordSectionDiv.style.bottom = "28%"
+        gbmLoginPasswordSectionDiv.style.marginLeft = "8%"
+        gbmLoginPasswordSectionDiv.style.fontSize = "23px"
+        gbmLoginPasswordSectionDiv.style.color = "#8a8686"
+        gbmLoginFormDiv.appendChild(gbmLoginPasswordSectionDiv)
+
+        //==>gbmLoginPasswordLblDiv//label
+        var gbmLoginPasswordLblDiv = document.createElement("label")
+        gbmLoginPasswordLblDiv.id = "gbmLoginPasswordLblDiv"
+        gbmLoginPasswordLblDiv.innerHTML = "Password<br>"
+        gbmLoginPasswordSectionDiv.appendChild(gbmLoginPasswordLblDiv)
+
+        //==>gbmLoginPasswordInputDiv//input
+        var gbmLoginPasswordInputDiv = document.createElement("input")
+        gbmLoginPasswordInputDiv.id = "gbmLoginPasswordInputDiv"
+        gbmLoginPasswordInputDiv.style.width = "100%"
+        gbmLoginPasswordInputDiv.type = "password"
+        gbmLoginPasswordInputDiv.style.height = "20%"
+        gbmLoginPasswordSectionDiv.appendChild(gbmLoginPasswordInputDiv)
+
+        //gbmLoginCheckboxSectionDiv
+        var gbmLoginCheckboxSectionDiv = document.createElement("div")
+        gbmLoginCheckboxSectionDiv.id = "gbmLoginCheckboxSectionDiv"
+        gbmLoginCheckboxSectionDiv.style.bottom = "55%"
+        gbmLoginCheckboxSectionDiv.style.position = "relative"
+        gbmLoginCheckboxSectionDiv.style.marginLeft = "8%"
+        gbmLoginCheckboxSectionDiv.style.color = "#8a8686"
+        gbmLoginFormDiv.appendChild(gbmLoginCheckboxSectionDiv)
+
+
+        //==>gbmLoginCheckboxInputDiv//input
+        var gbmLoginCheckboxInputDiv = document.createElement("input")
+        gbmLoginCheckboxInputDiv.id = "gbmLoginCheckboxInputDiv"
+        gbmLoginCheckboxInputDiv.type = "checkbox"
+        gbmLoginCheckboxInputDiv.style.cursor = "pointer"
+        gbmLoginCheckboxSectionDiv.appendChild(gbmLoginCheckboxInputDiv)
+
+        //==>gbmLoginCheckboxLblDiv//label
+        var gbmLoginCheckboxLblDiv = document.createElement("label")
+        gbmLoginCheckboxLblDiv.id = "gbmLoginCheckboxLblDiv"
+        gbmLoginCheckboxLblDiv.innerHTML = "Remember me"
+        gbmLoginCheckboxSectionDiv.appendChild(gbmLoginCheckboxLblDiv)
+
+        //gbmLoginButtonSectionDiv
+        var gbmLoginButtonSectionDiv = document.createElement("div")
+        gbmLoginButtonSectionDiv.id = "gbmLoginButtonSectionDiv"
+        gbmLoginButtonSectionDiv.style.position = "relative"
+        gbmLoginButtonSectionDiv.style.width = "90%"
+        gbmLoginButtonSectionDiv.style.height = "88%"
+        gbmLoginButtonSectionDiv.style.left = "63%"
+        gbmLoginButtonSectionDiv.style.bottom = "67%"
+        gbmLoginFormDiv.appendChild(gbmLoginButtonSectionDiv)
+
+        //=>gbmLoginBtn
+        var gbmLoginBtn = document.createElement('button')
+        gbmLoginBtn.id = "gbmLoginBtn"
+        gbmLoginBtn.style.width = "30%"
+        gbmLoginBtn.style.height = "20%"
+        gbmLoginBtn.style.borderRadius = "10px"
+        gbmLoginBtn.style.border = "none"
+        gbmLoginBtn.style.cursor = "pointer"
+        gbmLoginBtn.style.background = "royalblue"
+        gbmLoginBtn.style.color = "white"
+        gbmLoginBtn.style.position = "relative"
+        gbmLoginButtonSectionDiv.appendChild(gbmLoginBtn)
+
+        //==>gbmLogInLinkBtn
+        var gbmLogInLinkBtn = document.createElement("a")
+        gbmLogInLinkBtn.id = "gbmLogInLinkBtn"
+        gbmLogInLinkBtn.href = "Admin.html"
+        gbmLogInLinkBtn.style.textDecoration = "none"
+        gbmLogInLinkBtn.style.color = "white"
+        gbmLogInLinkBtn.innerText = "Log in"
+        gbmLoginBtn.appendChild(gbmLogInLinkBtn)
+
+
+
+    </script>
+    
+</body>
+</html>

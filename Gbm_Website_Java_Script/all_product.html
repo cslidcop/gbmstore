@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="GbmStyle.css" />
+    <style>
+        *{
+            margin : 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //gbmMasterDivHeader
+        var gbmMasterDivHeader = document.createElement("div")
+        gbmMasterDivHeader.id = "gbmMasterDivHeader"
+        gbmMasterDivHeader.style.background = "#191970"
+        gbmMasterDivHeader.style.width = "100%"
+        gbmMasterDivHeader.style.height = "10%"
+        gbmMasterDivHeader.style.position = "absolute"
+
+        var gbmTopMenuTable = document.createElement("table")
+        gbmTopMenuTable.id = "gbmTopMenuTable"
+        gbmTopMenuTable.style.borderSpacing = "12px"
+        gbmTopMenuTable.style.float = "right"
+        gbmTopMenuTable.style.marginRight = "2%"
+        gbmTopMenuTable.style.color = "white"
+        gbmTopMenuTable.style.textDecoration = "none"
+        gbmTopMenuTable.style.fontSize = "20px"
+        gbmTopMenuTable.style.fontFamily = "sans-serif"
+        gbmTopMenuTable.style.top = "11%"
+        gbmTopMenuTable.style.position = "relative"
+
+
+        var tbody = document.createElement("TBODY")
+        var tr = document.createElement("tr")
+
+        var tdHome = document.createElement("td")
+        var aHome = document.createElement("a")
+        aHome.href = "index.html"
+        aHome.innerText = "Home"
+        aHome.class = "gbmTopMenuTableLink"
+        aHome.style.color = "white"
+        aHome.style.textDecoration = "none"
+        tdHome.appendChild(aHome)
+
+        var tdProduct = document.createElement("td")
+        var aProduct = document.createElement("a")
+        aProduct.style.color = "white"
+        aProduct.style.textDecoration = "none"
+        aProduct.href = "All_product.html"
+        aProduct.innerText = "Our Products"
+        aProduct.class = "gbmTopMenuTableLink"
+        tdProduct.appendChild(aProduct)
+
+        var tdAboutUs = document.createElement("td")
+        var aAboutUs = document.createElement("a")
+        aAboutUs.href = "About-Us.html"
+        aAboutUs.innerText = "About Us"
+        aAboutUs.class = "gbmTopMenuTableLink"
+        aAboutUs.style.color = "white"
+        aAboutUs.style.textDecoration = "none"
+        tdAboutUs.appendChild(aAboutUs)
+
+        var tdContactUs = document.createElement("td")
+        var aContactUs = document.createElement("a")
+        aContactUs.href = "Contact-Us.html"
+        aContactUs.innerText = "Contact Us"
+        aContactUs.style.color = "white"
+        aContactUs.style.textDecoration = "none"
+        aContactUs.class = "gbmTopMenuTableLink"
+        tdContactUs.appendChild(aContactUs)
+
+
+        tr.appendChild(tdHome)
+        tr.appendChild(tdProduct)
+        tr.appendChild(tdAboutUs)
+        tr.appendChild(tdContactUs)
+        tbody.appendChild(tr)
+        gbmTopMenuTable.appendChild(tbody)
+        gbmMasterDivHeader.appendChild(gbmTopMenuTable)
+        document.body.appendChild(gbmMasterDivHeader)
+
+        //gbmMasterDivSideBar
+        var gbmMasterDivSideBar = document.createElement("div")
+        gbmMasterDivSideBar.id = "gbmMasterDivSideBar"
+        gbmMasterDivSideBar.style.background = "#4682B4"
+        gbmMasterDivSideBar.style.width = "10%"
+        gbmMasterDivSideBar.style.height = "90%"
+        gbmMasterDivSideBar.style.top = "10%"
+        gbmMasterDivSideBar.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivSideBar)
+
+        //gbmMasterDivContainer
+        var gbmMasterDivContainer = document.createElement("div")
+        gbmMasterDivContainer.id = "gbmMasterDivContainer"
+        gbmMasterDivContainer.style.background = "white"
+        gbmMasterDivContainer.style.width = "90%"
+        gbmMasterDivContainer.style.height = "90%"
+        gbmMasterDivContainer.style.left = "10%"
+        gbmMasterDivContainer.style.top = "10%"
+        gbmMasterDivContainer.style.position = "absolute"
+        document.body.appendChild(gbmMasterDivContainer)
+
+        //gbmTitlePageGridDiv
+        var gbmTitlePageGridDiv = document.createElement("div")
+        gbmTitlePageGridDiv.id = "gbmTitlePageGridDiv"
+        gbmTitlePageGridDiv.style.width = "100%"
+        gbmTitlePageGridDiv.style.height = "5%"
+        gbmTitlePageGridDiv.style.top = "5%"
+        gbmTitlePageGridDiv.style.position = "relative"
+        gbmMasterDivContainer.appendChild(gbmTitlePageGridDiv)
+
+        //=>gbmProductGridTitle
+        var gbmProductGridTitle = document.createElement("h2")
+        gbmProductGridTitle.id = "gbmProductGridTitle"
+        gbmProductGridTitle.style.textAlign = "center"
+        gbmProductGridTitle.style.fontSize = "36px"
+        gbmProductGridTitle.innerHTML = "Our Product"
+        gbmTitlePageGridDiv.appendChild(gbmProductGridTitle)
+
+
+        //gbmDivProductGrid
+        var gbmDivProductGrid = document.createElement("div")
+        gbmDivProductGrid.id = "gbmDivProductGrid"
+        gbmDivProductGrid.style.position = "relative"
+        gbmDivProductGrid.style.width = "90%"
+        gbmDivProductGrid.style.height = "80%"
+        gbmDivProductGrid.style.top = "15%"
+        gbmDivProductGrid.style.left = "5%"
+        gbmMasterDivContainer.appendChild(gbmDivProductGrid)
+        //-----------------------------
+        //=>gbmProductGridDiv1
+        var gbmProductGridDiv1 = document.createElement("div")
+        gbmProductGridDiv1.id = "gbmProductGridDiv1"
+        gbmProductGridDiv1.style.marginLeft = "0%"
+        gbmProductGridDiv1.style.width = "23%"
+        gbmProductGridDiv1.style.height = "40%"
+        gbmProductGridDiv1.style.float = "left"
+        gbmDivProductGrid.appendChild(gbmProductGridDiv1)
+
+        //==>gbmProductGridImg1
+        var gbmProductGridImg1 = document.createElement("img")
+        gbmProductGridImg1.id = "gbmProductGridImg1"
+        gbmProductGridImg1.src = "img/cool.jpg"
+        gbmProductGridImg1.style.width = "100%"
+        gbmProductGridImg1.style.height = "65%"
+        gbmProductGridDiv1.appendChild(gbmProductGridImg1)
+
+        //==>gbmProductGridTxt
+        var gbmProductGridTxt = document.createElement("span")
+        gbmProductGridTxt.id = "gbmProductGridTxt"
+        gbmProductGridTxt.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        gbmProductGridTxt.style.width = "100%"
+        gbmProductGridTxt.height = "30%"
+        gbmProductGridDiv1.appendChild(gbmProductGridTxt)
+
+        //-----------------------------------
+        //=>gbmProductGridDiv2
+        var gbmProductGridDiv2 = document.createElement("div")
+        gbmProductGridDiv2.id = "gbmProductGridDiv2"
+        gbmProductGridDiv2.style.marginLeft = "2.5%"
+        gbmProductGridDiv2.style.width = "23%"
+        gbmProductGridDiv2.style.height = "40%"
+        gbmProductGridDiv2.style.float = "left"
+        gbmDivProductGrid.appendChild(gbmProductGridDiv2)
+
+        //==>gbmProductGridImg2
+        var gbmProductGridImg2 = document.createElement("img")
+        gbmProductGridImg2.id = "gbmProductGridImg2"
+        gbmProductGridImg2.src = "img/cool.jpg"
+        gbmProductGridImg2.style.width = "100%"
+        gbmProductGridImg2.style.height = "65%"
+        gbmProductGridDiv2.appendChild(gbmProductGridImg2)
+
+        //==>gbmProductGridTxt2
+        var gbmProductGridTxt2 = document.createElement("span")
+        gbmProductGridTxt2.id = "gbmProductGridTxt2"
+        gbmProductGridTxt2.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        gbmProductGridTxt2.style.width = "100%"
+        gbmProductGridTxt2.height = "30%"
+        gbmProductGridDiv2.appendChild(gbmProductGridTxt2)
+
+        //-----------------------------------
+        //=>gbmProductGridDiv3
+        var gbmProductGridDiv3 = document.createElement("div")
+        gbmProductGridDiv3.id = "gbmProductGridDiv3"
+        gbmProductGridDiv3.style.marginRight = "0%"
+        gbmProductGridDiv3.style.width = "23%"
+        gbmProductGridDiv3.style.height = "40%"
+        gbmProductGridDiv3.style.float = "Right"
+        gbmDivProductGrid.appendChild(gbmProductGridDiv3)
+
+        //==>gbmProductGridTxt3
+        var gbmProductGridImg3 = document.createElement("img")
+        gbmProductGridImg3.id = "gbmProductGridImg3"
+        gbmProductGridImg3.src = "img/cool.jpg"
+        gbmProductGridImg3.style.width = "100%"
+        gbmProductGridImg3.style.height = "65%"
+        gbmProductGridDiv3.appendChild(gbmProductGridImg3)
+
+        //==>gbmProductGridTxt3
+        var gbmProductGridTxt3 = document.createElement("span")
+        gbmProductGridTxt3.id = "gbmProductGridTxt3"
+        gbmProductGridTxt3.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        gbmProductGridTxt3.style.width = "100%"
+        gbmProductGridTxt3.height = "30%"
+        gbmProductGridDiv3.appendChild(gbmProductGridTxt3)
+
+        //-------------------------------------------------------
+        
+        //-----------------------------------
+        //=>gbmProductGridDiv4
+        var gbmProductGridDiv4 = document.createElement("div")
+        gbmProductGridDiv4.id = "gbmProductGridDiv4"
+        gbmProductGridDiv4.style.marginRight = "2.5%"
+        gbmProductGridDiv4.style.width = "23%"
+        gbmProductGridDiv4.style.height = "40%"
+        gbmProductGridDiv4.style.float = "right"
+        gbmDivProductGrid.appendChild(gbmProductGridDiv4)
+
+        //==>gbmProductGridImg4
+        var gbmProductGridImg4 = document.createElement("img")
+        gbmProductGridImg4.id = "gbmProductGridImg4"
+        gbmProductGridImg4.src = "img/cool.jpg"
+        gbmProductGridImg4.style.width = "100%"
+        gbmProductGridImg4.style.height = "65%"
+        gbmProductGridDiv4.appendChild(gbmProductGridImg4)
+
+        //==>gbmProductGridTxt4
+        var gbmProductGridTxt4 = document.createElement("span")
+        gbmProductGridTxt4.id = "gbmProductGridTxt4"
+        gbmProductGridTxt4.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        gbmProductGridTxt4.style.width = "100%"
+        gbmProductGridTxt4.height = "30%"
+        gbmProductGridDiv4.appendChild(gbmProductGridTxt4)
+
+        //-------------------------------------------------------
+
+        //=>gbmProductGridDiv5
+        var gbmProductGridDiv5 = document.createElement("div")
+        gbmProductGridDiv5.id = "gbmProductGridDiv5"
+        gbmProductGridDiv5.style.marginLeft = "0%"
+        gbmProductGridDiv5.style.width = "23%"
+        gbmProductGridDiv5.style.height = "40%"
+        gbmProductGridDiv5.style.float = "left"
+        gbmDivProductGrid.appendChild(gbmProductGridDiv5)
+
+        //==>gbmProductGridImg5
+        var gbmProductGridImg5 = document.createElement("img")
+        gbmProductGridImg5.id = "gbmProductGridImg5"
+        gbmProductGridImg5.src = "img/cool.jpg"
+        gbmProductGridImg5.style.width = "100%"
+        gbmProductGridImg5.style.height = "65%"
+        gbmProductGridDiv1.appendChild(gbmProductGridImg5)
+
+        //==>gbmProductGridTxt5
+        var gbmProductGridTxt5 = document.createElement("span")
+        gbmProductGridTxt5.id = "gbmProductGridTxt5"
+        gbmProductGridTxt5.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        gbmProductGridTxt5.style.width = "100%"
+        gbmProductGridTxt5.height = "30%"
+        gbmProductGridDiv1.appendChild(gbmProductGridTxt5)
+
+        //--------------------------------------------------
+        //=>gbmProductGridDiv6
+        var gbmProductGridDiv6 = document.createElement("div")
+        gbmProductGridDiv6.id = "gbmProductGridDiv6"
+        gbmProductGridDiv6.style.marginLeft = "2.5%"
+        gbmProductGridDiv6.style.width = "23%"
+        gbmProductGridDiv6.style.height = "40%"
+        gbmProductGridDiv6.style.float = "left"
+        gbmDivProductGrid.appendChild(gbmProductGridDiv6)
+
+        //==>gbmProductGridImg6
+        var gbmProductGridImg6 = document.createElement("img")
+        gbmProductGridImg6.id = "gbmProductGridImg6"
+        gbmProductGridImg6.src = "img/cool.jpg"
+        gbmProductGridImg6.style.width = "100%"
+        gbmProductGridImg6.style.height = "65%"
+        gbmProductGridDiv6.appendChild(gbmProductGridImg6)
+
+        //==>gbmProductGridTxt6
+        var gbmProductGridTxt6 = document.createElement("span")
+        gbmProductGridTxt6.id = "gbmProductGridTxt2"
+        gbmProductGridTxt6.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        gbmProductGridTxt6.style.width = "100%"
+        gbmProductGridTxt6.height = "30%"
+        gbmProductGridDiv6.appendChild(gbmProductGridTxt6)
+        
+        //---------------------------------------------------------
+        //=>gbmProductGridDiv7
+        var gbmProductGridDiv7 = document.createElement("div")
+        gbmProductGridDiv7.id = "gbmProductGridDiv3"
+        gbmProductGridDiv7.style.marginRight = "0%"
+        gbmProductGridDiv7.style.width = "23%"
+        gbmProductGridDiv7.style.height = "40%"
+        gbmProductGridDiv7.style.float = "Right"
+        gbmDivProductGrid.appendChild(gbmProductGridDiv7)
+
+        //==>gbmProductGridTxt7
+        var gbmProductGridImg7 = document.createElement("img")
+        gbmProductGridImg7.id = "gbmProductGridImg7"
+        gbmProductGridImg7.src = "img/cool.jpg"
+        gbmProductGridImg7.style.width = "100%"
+        gbmProductGridImg7.style.height = "65%"
+        gbmProductGridDiv7.appendChild(gbmProductGridImg7)
+
+        //==>gbmProductGridTxt7
+        var gbmProductGridTxt7 = document.createElement("span")
+        gbmProductGridTxt7.id = "gbmProductGridTxt7"
+        gbmProductGridTxt7.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        gbmProductGridTxt7.style.width = "100%"
+        gbmProductGridTxt7.height = "30%"
+        gbmProductGridDiv7.appendChild(gbmProductGridTxt7)
+
+        //---------------------------------------------------
+
+        //=>gbmProductGridDiv8
+        var gbmProductGridDiv8 = document.createElement("div")
+        gbmProductGridDiv8.id = "gbmProductGridDiv8"
+        gbmProductGridDiv8.style.marginRight = "2.5%"
+        gbmProductGridDiv8.style.width = "23%"
+        gbmProductGridDiv8.style.height = "40%"
+        gbmProductGridDiv8.style.float = "right"
+        gbmDivProductGrid.appendChild(gbmProductGridDiv8)
+
+        //==>gbmProductGridImg4
+        var gbmProductGridImg8 = document.createElement("img")
+        gbmProductGridImg8.id = "gbmProductGridImg8"
+        gbmProductGridImg8.src = "img/cool.jpg"
+        gbmProductGridImg8.style.width = "100%"
+        gbmProductGridImg8.style.height = "65%"
+        gbmProductGridDiv8.appendChild(gbmProductGridImg8)
+
+        //==>gbmProductGridTxt8
+        var gbmProductGridTxt8 = document.createElement("span")
+        gbmProductGridTxt8.id = "gbmProductGridTxt8"
+        gbmProductGridTxt8.innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        gbmProductGridTxt8.style.width = "100%"
+        gbmProductGridTxt8.height = "30%"
+        gbmProductGridDiv8.appendChild(gbmProductGridTxt8)
+    </script>
+</body>
+</html>
