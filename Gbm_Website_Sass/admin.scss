@@ -1,0 +1,161 @@
+﻿/*#region Gbm_Admin_@Media */
+/*$appointment_sp_color: red;*/
+
+
+
+    /*@media print {
+        body {
+            background-color: $appointment_sp_color;
+        }
+    }*/
+   @media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}
+/*#endregion */
+
+/*#region Gbm_Admin_Website*/
+$body_margin: 0px;
+
+$header_background_color: #191970;
+$header_width: 100%;
+$header_height: 10%;
+$header_position: absolute;
+
+
+@mixin gbm_page_header {
+    background-color: $header_background_color;
+    width: $header_width;
+    height: $header_height;
+    position: $header_position;
+}
+
+$appointment_Item_img_height: 70%;
+$bought_Item_img_width: 50%;
+$bought_Item_img_height: 70%;
+
+@mixin Item_img {
+    width: $bought_Item_img_width;
+    height: $bought_Item_img_height;
+}
+
+
+body {
+    margin: $body_margin;
+}
+
+
+
+#gbm_page_header {
+    /*background-color: $header_background_color;
+    width: 100%;
+    height: 10%;*/
+    /*position: absolute;*/
+    @include gbm_page_header
+}
+
+#gbm_page_content {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#gbm_page_sidebar {
+    background-color: #4682B4;
+    width: 10%;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+}
+
+#gbm_adminDashboard_div {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+#gbm_div__boughtItem_img {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#gbm_boughItem_img {
+    /*width: 50%;
+    height: 70%;*/
+    /*width: $bought_Item_img_width;
+    height: $bought_Item_img_height;*/
+    @include Item_img;
+    border-radius: 100%;
+    float: right;
+    position: relative;
+    right: 5%;
+    top: 10%;
+}
+
+#gbm_boughtItem_sp {
+    float: right;
+    position: relative;
+    left: 35%;
+    top: 85%;
+    font-size: 32px;
+}
+
+#gbm_bookingItme_div {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+#gbm_bookingItem_img2 {
+    /*width: 50%;
+    height: 70%;*/
+    /*width: $bought_Item_img_width;*/
+    /*height: $bought_Item_img_height;*/
+    @include Item_img;
+    border-radius: 100%;
+    float: left;
+    position: relative;
+    left: 5%;
+    top: 10%;
+}
+
+#gbm_bookingItem_sp2 {
+    float: left;
+    position: relative;
+    right: 35%;
+    top: 85%;
+    font-size: 32px;
+}
+
+#gbm_appoitment_div {
+    height: 50%;
+    width: 100%;
+}
+
+#gbm_appointment_img {
+    @include Item_img;
+    width: 25%;
+    /*height: 70%;*/
+    /*height:$appointment_Item_img_height;*/
+    border-radius: 100%;
+    top: 10%;
+    position: relative;
+    display: flex;
+    margin: 0px auto;
+}
+
+#gbm_appointment_sp {
+    display: flex;
+    margin: 0px 43%;
+    font-size: 32px;
+    position: relative;
+    top: 14%;
+    width: 10px;
+}
+/*#endregion */
+

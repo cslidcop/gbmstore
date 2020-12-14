@@ -1,0 +1,974 @@
+﻿
+/*Gbm_AdminDahboard_div*/
+$Gbm_AdminDahboard_div_width: 100%;
+$Gbm_AdminDahboard_div_height: 50%;
+$Gbm_Position_relative_position: relative;
+$Gbm_Position_relative_top: 10%;
+$Gbm_position_float_left_float: left;
+$Gbm_position_float_right_float: right;
+
+
+/*Gbm_BoughtItem_img_div*/
+$Gbm_BoughtItem_img_div_width: 50%;
+$Gbm_BoughtItem_img_div_height: 100%;
+
+@mixin width50_height50 {
+    width: $Gbm_BoughtItem_img_div_width;
+    height: $Gbm_BoughtItem_img_div_height;
+}
+
+/*Gbm_BoughtItem_imges__div*/
+$Gbm_BoughtItem_imges__div_width: 40%;
+$Gbm_BoughtItem_imges__div_height: 70%;
+$Gbm_BoughtItem_imges__div_border_radius: 100%;
+$Gbm_BoughtItem_imges__div_right: 5%;
+$Gbm_BoughtItem_imges__div_top: 10%;
+
+/*Gbm_Store_login*/
+
+$Gbm_Login_div_width: 30%;
+$Gbm_Login_div_height: 50%;
+$Gbm_Login_div_top: 12%;
+$Gbm_Login_div_display: grid;
+$Gbm_Login_div_box_shadow: 0 0 3px;
+$Gbm_Login_div_font_family: sans-serif;
+$Gbm_Login_div_margin_left: 35%;
+
+/*Gbm_Login_form__div*/
+$Gbm_Login_form__div_width: 100%;
+$Gbm_Login_form__div_height: 100%;
+$Gbm_Login_form__div_top: 10%;
+
+/*Gbm_Login_Uname_section_div*/
+$Gbm_Login_Uname_section_div_width: 80%;
+$Gbm_Login_Uname_section_div_height: 60%;
+
+@mixin gbm_Width80_height60 {
+    width: $Gbm_Login_Uname_section_div_width;
+    height: $Gbm_Login_Uname_section_div_height;
+    margin-left: $Gbm_Login_Uname_section_div_margin_left;
+    font-size: $Gbm_Login_Uname_section_div_font_size;
+    color: $Gbm_Login_Uname_section_div_color;
+}
+
+$Gbm_Login_Uname_section_div_margin_left: 8%;
+$Gbm_Login_Uname_section_div_font_size: 23px;
+$Gbm_Login_Uname_section_div_color: #8a8686;
+
+/*Gbm_Login_Password_section_div*/
+$Gbm_Login_Password_section_div_bottom: 28%;
+/*Gbm_User_Sp__div*/
+$Gbm_User_Sp__div_left: 20%;
+$Gbm_User_Sp__div_top: 85%;
+$Gbm_User_Sp__div_font_size: 32px;
+
+@mixin Gbm_User_Sp__div {
+    top: $Gbm_User_Sp__div_top;
+    font-size: $Gbm_User_Sp__div_font_size;
+}
+
+/*Gbm_border_radius*/
+@mixin Gbm_border_radius {
+    border-radius: $Gbm_BoughtItem_imges__div_border_radius;
+}
+
+/*Gbm_Width_Height*/
+@mixin Gbm_Width40_Height70 {
+    width: $Gbm_BoughtItem_imges__div_width;
+    height: $Gbm_BoughtItem_imges__div_height;
+}
+
+/*position_floatLeft*/
+@mixin float_left {
+    float: $Gbm_position_float_left_float;
+}
+
+/*position_floatRight*/
+@mixin float_right {
+    float: $Gbm_position_float_right_float;
+}
+
+/*position_relative*/
+@mixin Gbm_Position_relative {
+    position: $Gbm_Position_relative_position;
+}
+
+/*gbm_bookingItem_img2*/
+$gbm_bookingItem_img2_left: 5%;
+$gbm_bookingItem_img2_top: 10%;
+
+/*Gbm_sp2_admin__div*/
+$Gbm_sp2_admin__div_right: 20%;
+
+/*Gbm_all_products*/
+$gbm_div__product_grid_width: 90%;
+$gbm_div__product_grid_height: 80%;
+$gbm_div__product_grid_left: 5%;
+$gbm_div__product_grid_top: 10%;
+
+/*gbm_div__product_grid_top: 10%;*/
+@mixin gbm_div__product_grid_top10 {
+    top: $gbm_div__product_grid_top;
+}
+
+/*gbm_product__grid*/
+$gbm_product__grid_width: 23%;
+$gbm_product__grid_height: 40%;
+
+/*Gbm_margin_left0*/
+$Gbm_margin_left0_margin_left: 0;
+
+@mixin Gbm_margin_left0 {
+    margin-left: $Gbm_margin_left0_margin_left;
+}
+
+/*Gbm_margin_left2.5*/
+$Gbm_margin_left25_margin_left: 2.5%;
+
+@mixin Gbm_margin_left25_margin_left {
+    margin-left: $Gbm_margin_left25_margin_left;
+}
+/*Gbm_product_grid_img*/
+$Gbm_product_grid_img_width: 100%;
+$Gbm_product_grid_img_height: 65%;
+
+/*Gbm_product_grid_text*/
+$Gbm_product_grid_text_width: 100%;
+$Gbm_product_grid_text_height: 30%;
+
+/*gbm_product__grid1*/
+$gbm_product__grid1_width: 23%;
+$gbm_product__grid1_height: 40%;
+
+@mixin gbm_width23_height40 {
+    width: $gbm_product__grid1_width;
+    height: $gbm_product__grid1_height;
+}
+
+/*gbm_grid_margin_right0*/
+$gbm_grid_margin_right0_margin_right: 0%;
+
+@mixin gbm_grid_margin_right0 {
+    margin-right: $gbm_grid_margin_right0_margin_right;
+}
+
+/*gbm_grid_margin_right25*/
+$gbm_grid_margin_right25_margin_right: 2.5%;
+
+@mixin gbm_grid_margin_right25 {
+    margin-right: $gbm_grid_margin_right25_margin_right;
+}
+
+/*Gbm_Login_checkbox_section_div*/
+$Gbm_Login_checkbox_section_div_bottom: 55%;
+$Gbm_Login_checkbox_section_div_margin-left: 8%;
+$Gbm_Login_checkbox_section_div_color: #8a8686;
+$Gbm_Login_checkbox_section_div_font-size: 18px;
+
+/*Gbm_Login_Button_section_div*/
+$Gbm_Login_Button_section_div_width: 90%;
+$Gbm_Login_Button_section_div_left: 63%;
+$Gbm_Login_Button_section_div_height: 88%;
+$Gbm_Login_Button_section_div_bottom: 67%;
+
+/*Gbm_Login_btn*/
+$Gbm_Login_btn_width: 30%;
+$Gbm_Login_btn_height: 20%;
+$Gbm_Login_btn_border_radius: 10px;
+$Gbm_Login_btn_border: none;
+$Gbm_Login_btn_cursor: pointer;
+$Gbm_Login_btn_background_color: royalblue;
+$Gbm_Login_btn_color: white;
+
+@mixin Gbm_button_cursor {
+    cursor: $Gbm_Login_btn_cursor;
+}
+
+/*Gbm_Log_In_link__btn*/
+$Gbm_Log_In_link__btn_text_decoration: none;
+$Gbm_Log_In_link__btn_color: white;
+$Gbm_Log_In_link__btn_font_size: 21px;
+
+/*gbm_title__page_grid*/
+$gbm_title__page_grid_height: 5%;
+$gbm_title__page_grid_width: 100%;
+
+/*Gbm_product_grid__title*/
+$Gbm_product_grid__title_text_align: center;
+$Gbm_product_grid__title_font_size: 36px;
+
+#Gbm_AdminDahboard_div {
+    width: $Gbm_AdminDahboard_div_width;
+    height: $Gbm_AdminDahboard_div_height;
+    @include Gbm_Position_relative;
+    top: $Gbm_Position_relative_top;
+}
+
+#Gbm_BoughtItem_img_div {
+    @include width50_height50;
+    @include float_left;
+}
+
+#Gbm_BoughtItem_imges__div {
+    right: $Gbm_BoughtItem_imges__div_right;
+    top: $Gbm_BoughtItem_imges__div_top;
+    @include Gbm_Width40_Height70;
+    @include Gbm_border_radius;
+    @include float_right;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_User_Sp__div {
+    left: $Gbm_User_Sp__div_left;
+    @include Gbm_User_Sp__div;
+    @include float_right;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_Admin_div {
+    @include width50_height50;
+    @include float_right;
+}
+
+#gbm_bookingItem_img2 {
+    @include Gbm_Width40_Height70;
+    @include Gbm_border_radius;
+    @include float_left;
+    @include Gbm_Position_relative;
+    left: $gbm_bookingItem_img2_left;
+    top: $gbm_bookingItem_img2_top;
+}
+
+#Gbm_sp2_admin__div {
+    right: $Gbm_sp2_admin__div_right;
+    @include Gbm_Position_relative;
+    @include float_left;
+    @include Gbm_User_Sp__div;
+}
+
+
+
+#Gbm_Login_div {
+    width: $Gbm_Login_div_width;
+    height: $Gbm_Login_div_height;
+    top: $Gbm_Login_div_top;
+    margin-left: $Gbm_Login_div_margin_left;
+    display: $Gbm_Login_div_display;
+    box-shadow: $Gbm_Login_div_box_shadow;
+    font-family: $Gbm_Login_div_font_family;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_Login_form__div {
+    width: $Gbm_Login_form__div_width;
+    height: $Gbm_Login_form__div_height;
+    top: $Gbm_Login_form__div_top;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_Login_Uname_section_div {
+    @include gbm_Width80_height60;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_Login_Password_section_div {
+    @include gbm_Width80_height60;
+    @include Gbm_Position_relative;
+    bottom: $Gbm_Login_Password_section_div_bottom;
+}
+
+
+#Gbm_Login_checkbox_section_div {
+    bottom: $Gbm_Login_checkbox_section_div_bottom;
+    margin-left: $Gbm_Login_checkbox_section_div_margin-left;
+    color: $Gbm_Login_checkbox_section_div_color;
+    font-size: $Gbm_Login_checkbox_section_div_font-size;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_Login_Button_section_div {
+    width: $Gbm_Login_Button_section_div_width;
+    height: $Gbm_Login_Button_section_div_height;
+    bottom: $Gbm_Login_Button_section_div_bottom;
+    left: $Gbm_Login_Button_section_div_left;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_Login_btn {
+    width: $Gbm_Login_btn_width;
+    height: $Gbm_Login_btn_height;
+    position: relative;
+    border-radius: $Gbm_Login_btn_border_radius;
+    border: $Gbm_Login_btn_border;
+    background-color: $Gbm_Login_btn_background_color;
+    color: $Gbm_Login_btn_color;
+    @include Gbm_button_cursor;
+}
+
+#Gbm_Login_checkbox_ipt_div {
+    @include Gbm_button_cursor;
+}
+
+#Gbm_Log_In_link__btn {
+    text-decoration: $Gbm_Log_In_link__btn_text_decoration;
+    color: $Gbm_Log_In_link__btn_color;
+    font-size: $Gbm_Log_In_link__btn_font_size;
+}
+
+/*Gbm_all_products*/
+#gbm_div__product_grid {
+    position: relative;
+    width: $gbm_div__product_grid_width;
+    height: $gbm_div__product_grid_height;
+    left: $gbm_div__product_grid_left;
+    @include gbm_div__product_grid_top10;
+    @include Gbm_Position_relative;
+}
+
+.gbm_product__grid {
+    width: $gbm_product__grid_width;
+    height: $gbm_product__grid_height;
+    @include float_left;
+}
+
+#gbm_grid1 {
+    @include Gbm_margin_left0;
+}
+
+#gbm_grid2 {
+    @include Gbm_margin_left25_margin_left;
+}
+
+
+#Gbm_product_grid__img1 {
+    width: $Gbm_product_grid_img_width;
+    height: $Gbm_product_grid_img_height;
+}
+
+.Gbm_product_grid__text {
+    width: $Gbm_product_grid_text_width;
+    height: $Gbm_product_grid_text_height;
+    @include Gbm_Position_relative;
+}
+
+.gbm_product__grid1 {
+    @include float_right;
+    @include gbm_width23_height40;
+}
+
+#gbm_grid3 {
+    @include gbm_grid_margin_right0;
+}
+
+#gbm_grid4 {
+    @include gbm_grid_margin_right25;
+}
+
+div.gbm_product__grid2 {
+    @include gbm_width23_height40;
+    @include float_left;
+    @include Gbm_Position_relative;
+    @include gbm_div__product_grid_top10;
+}
+
+#gbm_grid5 {
+    @include Gbm_margin_left0;
+}
+
+#gbm_grid6 {
+    @include Gbm_margin_left25_margin_left;
+}
+
+div.gbm_product__grid3 {
+    @include gbm_width23_height40;
+    @include gbm_div__product_grid_top10;
+    @include Gbm_Position_relative;
+    @include float_right;
+}
+
+#gbm_grid7 {
+    @include gbm_grid_margin_right0;
+}
+
+#gbm_grid8 {
+    @include gbm_grid_margin_right25;
+}
+
+#gbm_title__page_grid {
+    height: $gbm_title__page_grid_height;
+    width: $gbm_title__page_grid_width;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_product_grid__title {
+    text-align: $Gbm_product_grid__title_text_align;
+    font-size: $Gbm_product_grid__title_font_size;
+}
+
+/* Admin */
+$Gbm_Appointment_link_text_decoration: none;
+$Gbm_Appointment_link_color: black;
+
+@mixin Gbm_Appointment_link_text_decoration {
+    text-decoration: $Gbm_Appointment_link_text_decoration;
+}
+
+/*Gbm_AdminDashboard_check__div*/
+$Gbm_AdminDashboard_check__div_width: 100%;
+$Gbm_AdminDashboard_check__div_height: 50%;
+
+@mixin Gbm_AdminDashboard_check__div_W100_H50 {
+    width: $Gbm_AdminDashboard_check__div_width;
+    height: $Gbm_AdminDashboard_check__div_height;
+}
+
+/*Gbm_BoughtItem_Img__div*/
+$Gbm_BoughtItem_Img__div_width: 50%;
+$Gbm_BoughtItem_Img__div_height: 100%;
+
+@mixin Gbm_BoughtItem_Img__div_W50_H100 {
+    width: $Gbm_BoughtItem_Img__div_width;
+    height: $Gbm_BoughtItem_Img__div_height;
+}
+
+/*Gbm_Bought_Img__div*/
+$Gbm_Bought_Img__div_width: 50%;
+$Gbm_Bought_Img__div_height: 70%;
+
+@mixin Gbm_Bought_Img__div_W50_H70 {
+    width: $Gbm_Bought_Img__div_width;
+    height: $Gbm_Bought_Img__div_height;
+}
+
+$Gbm_Bought_Img__div_right: 5%;
+
+/*Gbm_Bought_Sp__div*/
+$Gbm_Bought_Sp__div_left: 35%;
+$Gbm_Bought_Sp__div_top: 85%;
+$Gbm_Bought_Sp__div_font_size: 32px;
+
+/*Gbm_Booking_Img__div*/
+$Gbm_Booking_Img__div_left: 5%;
+
+/*Gbm_Booking_Sp__div*/
+$Gbm_Booking_Sp__div_right: 35%;
+$Gbm_Booking_Sp__div_top: 85%;
+$Gbm_Booking_Sp__div_font_size: 32px;
+
+@mixin Gbm_store_font_size32 {
+    font-size: $Gbm_Booking_Sp__div_font_size;
+}
+
+/*Gbm_Appointment_Img__div*/
+$Gbm_Appointment_Img__div_width: 25%;
+$Gbm_Appointment_Img__div_height: 70%;
+$Gbm_Appointment_Img__div_display: flex;
+$Gbm_Appointment_Img__div_margin: 0px auto;
+
+.Gbm_Appointment_link {
+    @include Gbm_Appointment_link_text_decoration;
+    color: $Gbm_Appointment_link_color;
+}
+
+#Gbm_AdminDashboard_check__div {
+    @include Gbm_AdminDashboard_check__div_W100_H50;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_BoughtItem_Img__div {
+    @include Gbm_BoughtItem_Img__div_W50_H100;
+    @include float_left;
+}
+
+#Gbm_Bought_Img__div {
+    @include Gbm_Bought_Img__div_W50_H70;
+    @include Gbm_border_radius;
+    @include float_right;
+    @include Gbm_Position_relative;
+    @include gbm_div__product_grid_top10;
+    right: $Gbm_Bought_Img__div_right;
+}
+
+#Gbm_Bought_Sp__div {
+    @include float_right;
+    @include Gbm_Position_relative;
+    left: $Gbm_Bought_Sp__div_left;
+    top: $Gbm_Bought_Sp__div_top;
+    font-size: $Gbm_Bought_Sp__div_font_size;
+}
+
+#Gbm_BookingItem__div {
+    @include Gbm_BoughtItem_Img__div_W50_H100;
+    @include float_right;
+}
+
+#Gbm_Booking_Img__div {
+    @include Gbm_Bought_Img__div_W50_H70;
+    @include Gbm_border_radius;
+    @include float_left;
+    @include Gbm_Position_relative;
+    @include gbm_div__product_grid_top10;
+    left: $Gbm_Booking_Img__div_left;
+}
+
+#Gbm_Booking_Sp__div {
+    @include float_left;
+    @include Gbm_Position_relative;
+    right: $Gbm_Booking_Sp__div_right;
+    top: $Gbm_Booking_Sp__div_top;
+    @include Gbm_store_font_size32;
+}
+
+#Gbm_Appointment_check__div {
+    @include Gbm_AdminDashboard_check__div_W100_H50;
+}
+
+#Gbm_Appointment_Img__div {
+    width: $Gbm_Appointment_Img__div_width;
+    height: $Gbm_Appointment_Img__div_height;
+    @include Gbm_border_radius;
+    @include gbm_div__product_grid_top10;
+    @include Gbm_Position_relative;
+    display: $Gbm_Appointment_Img__div_display;
+    margin: $Gbm_Appointment_Img__div_margin;
+}
+
+$Gbm_Appointment_Sp__div_display: flex;
+$Gbm_Appointment_Sp__div_margin: 0px 43%;
+$Gbm_Appointment_Sp__div_top: 14%;
+$Gbm_Appointment_Sp__div_width: 10px;
+
+#Gbm_Appointment_Sp__div {
+    display: $Gbm_Appointment_Sp__div_display;
+    margin: $Gbm_Appointment_Sp__div_margin;
+    @include Gbm_store_font_size32;
+    @include Gbm_Position_relative;
+    top: $Gbm_Appointment_Sp__div_top;
+    width: $Gbm_Appointment_Sp__div_width;
+}
+
+/*About_us*/
+
+/*Gbm_img__div*/
+$Gbm_img__div_width: 50%;
+$Gbm_img__div_height: 50%;
+$Gbm_img__div_left: 7%;
+
+/*Gbm_images_about_us__div*/
+$Gbm_images_about_us__div_width: 60%;
+$Gbm_images_about_us__div_height: 100%;
+
+/*Gbm_description__div*/
+$Gbm_description__div_width: 100%;
+$Gbm_description__div_height: 100%;
+$Gbm_description__div_bottom: 104%;
+$Gbm_description__div_left: 68%;
+$Gbm_description__div_font_size: 23px;
+
+
+#Gbm_img__div {
+    width: $Gbm_img__div_width;
+    height: $Gbm_img__div_height;
+    position: relative;
+    left: $Gbm_img__div_left;
+    @include gbm_div__product_grid_top10;
+}
+
+#Gbm_images_about_us__div {
+    width: $Gbm_images_about_us__div_width;
+    height: $Gbm_images_about_us__div_height;
+}
+
+#Gbm_description__div {
+    height: $Gbm_description__div_height;
+    width: $Gbm_description__div_width;
+    @include Gbm_Position_relative;
+    bottom: $Gbm_description__div_bottom;
+    left: $Gbm_description__div_left;
+    font-size: $Gbm_description__div_font_size;
+}
+
+/*Contact_Us*/
+/*Gbm_contact_us_form__div*/
+$Gbm_contact_us_form__div_width: 40%;
+$Gbm_contact_us_form__div_height: 80%;
+$Gbm_contact_us_form__div_left: 5%;
+
+/*Gbm_contact_us_title__form*/
+$Gbm_contact_us_title__form_text_align: center;
+$Gbm_contact_us_title__form_width: 100%;
+$Gbm_contact_us_title__form_left: 0%;
+$Gbm_contact_us_title__form_text_shadow: -4px 4px dimgray;
+$Gbm_contact_us_title__form_font_size: 71px;
+
+/*Gbm_lname__div*/
+$Gbm_lname__div_width: 48%;
+$Gbm_lname__div_position: relative;
+
+@mixin Gbm_lname__div_W_P48R {
+    width: $Gbm_lname__div_width;
+    position: $Gbm_lname__div_position;
+}
+
+$Gbm_lname__div_margin_right: 2%;
+
+/*Gbm_fname__div*/
+$Gbm_fname__div_margin_left: 2%;
+
+/*Gbm_Send__div*/
+$Gbm_Send__div_width: 100%;
+$Gbm_Send__div_bottom: 15%;
+
+/*Gbm_div-but__Send*/
+$Gbm_div-but__Send_top: 20%;
+$Gbm_div-but__Send_width: 50%;
+
+/*Gbm_button__send__div*/
+$Gbm_button__send__div_font_size: 25px;
+$Gbm_button__send__div_background_color: #191970;
+$Gbm_button__send__div_color: white;
+
+/*Gbm_Cancel__div*/
+$Gbm_Cancel__div_float: left;
+$Gbm_Cancel__div_width: 50%;
+$Gbm_Cancel__div_right: 17%;
+
+/*Gbm_button__cancel__div*/
+$Gbm_button__cancel__div_font_size: 25px;
+$Gbm_button__cancel__div_background_color: #ff0000;
+$Gbm_button__cancel__div_color: white;
+
+#Gbm_contact_us_form__div {
+    width: $Gbm_contact_us_form__div_width;
+    height: $Gbm_contact_us_form__div_height;
+    @include Gbm_Position_relative;
+    left: $Gbm_contact_us_form__div_left;
+    @include gbm_div__product_grid_top10;
+}
+
+#Gbm_contact_us_title__form {
+    text-align: $Gbm_contact_us_title__form_text_align;
+    width: $Gbm_contact_us_title__form_width;
+    left: $Gbm_contact_us_title__form_left;
+    @include Gbm_Position_relative;
+    text-shadow: $Gbm_contact_us_title__form_text_shadow;
+    font-size: $Gbm_contact_us_title__form_font_size;
+}
+
+#Gbm_lname__div {
+    @include Gbm_lname__div_W_P48R;
+    @include float_left;
+    margin-right: $Gbm_lname__div_margin_right;
+}
+
+#Gbm_fname__div {
+    @include Gbm_lname__div_W_P48R;
+    @include float_right;
+    margin-left: $Gbm_fname__div_margin_left;
+}
+
+#Gbm_YourMessage__div {
+    @include Gbm_AdminDashboard_check__div_W100_H50;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_area__yourmessage {
+    @include Gbm_AdminDashboard_check__div_W100_H50;
+}
+
+#Gbm_Send__div {
+    width: $Gbm_Send__div_width;
+    @include Gbm_Position_relative;
+    bottom: $Gbm_Send__div_bottom;
+}
+
+#Gbm_div-but__Send {
+    @include float_left;
+    width: $Gbm_div-but__Send_width;
+    top: $Gbm_div-but__Send_top;
+}
+
+#Gbm_button__send__div {
+    @include width50_height50;
+    @include Gbm_Position_relative;
+    @include Gbm_button_cursor;
+    font-size: $Gbm_button__send__div_font_size;
+    background-color: $Gbm_button__send__div_background_color;
+    color: $Gbm_button__send__div_color;
+}
+
+#Gbm_Cancel__div {
+    float: $Gbm_Cancel__div_float;
+    width: $Gbm_Cancel__div_width;
+    @include Gbm_Position_relative;
+    right: $Gbm_Cancel__div_right;
+}
+
+#Gbm_button__cancel__div {
+    @include width50_height50;
+    @include Gbm_Position_relative;
+    @include Gbm_button_cursor;
+    font-size: $Gbm_button__cancel__div_font_size;
+    background-color: $Gbm_button__cancel__div_background_color;
+    color: $Gbm_button__cancel__div_color;
+}
+
+/*Description*/
+/*Gbm_Description_image_btn__div*/
+$Gbm_Description_image_btn__div_width: 50%;
+$Gbm_Description_image_btn__div_height: 90%;
+
+/*Gbm_Description_imge__div*/
+$Gbm_Description_imge__div_width: 70%;
+$Gbm_Description_imge__div_height: 50%;
+$Gbm_Description_imge__div_left: 25%;
+
+@mixin Gbm_Description_imge__div_left {
+    left: $Gbm_Description_imge__div_left;
+}
+
+/*Gbm_button_description__div*/
+$Gbm_button_description__div_width: 70%;
+$Gbm_button_description__div_height: 10%;
+
+/*Gbm_Description__div*/
+$Gbm_Description__div_width: 50%;
+$Gbm_Description__div_height: 90%;
+
+/*Gbm_Description_spn__div*/
+$Gbm_Description_spn__div_width: 70%;
+$Gbm_Description_spn__div_height: 60%;
+$Gbm_Description_spn__div_font-size: 25px;
+
+#Gbm_Description_image_btn__div {
+    width: $Gbm_Description_image_btn__div_width;
+    height: $Gbm_Description_image_btn__div_height;
+    @include float_left;
+    @include gbm_div__product_grid_top10;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_Description_imge__div {
+    @include Gbm_Position_relative;
+    width: $Gbm_Description_imge__div_width;
+    height: $Gbm_Description_imge__div_height;
+    @include Gbm_Description_imge__div_left;
+}
+
+
+#Gbm_button_description__div {
+    width: $Gbm_button_description__div_width;
+    height: $Gbm_button_description__div_height;
+    @include Gbm_Position_relative;
+    @include Gbm_Description_imge__div_left;
+}
+
+#Gbm_Description__div {
+    width: $Gbm_Description__div_width;
+    height: $Gbm_Description__div_height;
+    @include Gbm_Position_relative;
+    @include float_right;
+    @include gbm_div__product_grid_top10;
+}
+
+#gbm_span__description {
+    @include width50_height50;
+    @include Gbm_Position_relative;
+}
+
+#Gbm_Description_spn__div {
+    width: $Gbm_Description_spn__div_width;
+    height: $Gbm_Description_spn__div_height;
+    @include Gbm_Position_relative;
+    font-size: $Gbm_Description_spn__div_font-size;
+}
+
+/* Payment_Gateaway */
+/*Gbm_Payment_form__package*/
+$Gbm_Payment_form__package_width: 60%;
+
+/*Gbm_YourOrder_div*/
+/*$Gbm_YourOrder_div_left: 5%;*/
+$Gbm_YourOrder_div_width: 40%;
+
+/*Gbm_YourOrder_tbl__div*/
+$Gbm_YourOrder_tbl__div_border_collapse: collapse;
+$Gbm_YourOrder_tbl__div_width: 298px;
+$Gbm_YourOrder_tbl__div_height: 100px;
+$Gbm_YourOrder_tbl__div_text_align: center;
+
+/*Gbm_YourOrder_tr__tbl*/
+$Gbm_YourOrder_tr__tbl_background_color: #dddddd;
+$Gbm_YourOrder_tr__tbl_color: white;
+
+/*Gbm_YourOrder_information_div2*/
+$Gbm_YourOrder_information_div2_background_color: #dddddd;
+$Gbm_YourOrder_information_div2_padding: 8px;
+$Gbm_YourOrder_information_div2_width: 283px;
+
+/*Gbm_YourOrder_Submit_div*/
+$Gbm_YourOrder_Submit_div_top: 102%;
+
+/*Gbm_yourOrder_button*/
+$Gbm_yourOrder_button_width: 298px;
+$Gbm_yourOrder_button_height: 36px;
+$Gbm_yourOrder_button_background_color: #666666;
+$Gbm_yourOrder_button_color: white;
+
+/*Gbm_Payment_form__div*/
+$Gbm_Payment_form__div_width: 50%;
+$Gbm_Payment_form__div_height: 80%;
+$Gbm_Payment_form__div_left: 10%;
+
+/*Gbm_Payment_title__form*/
+$Gbm_Payment_title__form_text_align: center;
+$Gbm_Payment_title__form_width: 100%;
+$Gbm_Payment_title__form_left: 10%;
+
+/*Gbm_Payment_lname_div*/
+$Gbm_Payment_lname_div_width: 45%;
+$Gbm_Payment_lname_div_margin_right: 5%;
+
+/*Gbm_Payment_fname_div*/
+$Gbm_Payment_fname_div_width: 45%;
+$Gbm_Payment_fname_div_margin_left: 5%;
+
+/*Gbm_txt_address__div*/
+$Gbm_txt_address__div_width: 100%;
+$Gbm_txt_address__div_height: 100%;
+
+/*Gbm_Payment_Country__div*/
+$Gbm_Payment_Country__div_width: 45%;
+$Gbm_Payment_Country__div_margin_right: 5%;
+
+/*Gbm_Payment_zip__div*/
+$Gbm_Payment_zip__div_width: 45%;
+
+@mixin Gbm_Payment_zip__div_width {
+    width: $Gbm_Payment_zip__div_width;
+}
+
+$Gbm_Payment_zip__div_margin_left: 5%;
+
+/*Gbm_Payment_Email__div*/
+$Gbm_Payment_Email__div_margin_right: 5%;
+
+/*Gbm_Payment_Phone__div*/
+$Gbm_Payment_Phone__div_margin_left: 5%;
+
+/*Gbm_payment_input__div*/
+$Gbm_payment_input__div_width: 100%;
+/* ------------ */
+#Gbm_Payment_form__package {
+    width: $Gbm_Payment_form__package_width;
+    @include float_left;
+}
+
+#Gbm_YourOrder_div {
+    @include Gbm_Position_relative;
+    /*left: $Gbm_YourOrder_div_left;*/
+    width: $Gbm_YourOrder_div_width;
+    @include float_right;
+}
+
+#Gbm_YourOrder_tbl__div {
+    border-collapse: $Gbm_YourOrder_tbl__div_border_collapse;
+    width: $Gbm_YourOrder_tbl__div_width;
+    height: $Gbm_YourOrder_tbl__div_height;
+    text-align: $Gbm_YourOrder_tbl__div_text_align;
+}
+
+#Gbm_YourOrder_tr__tbl {
+    background-color: $Gbm_YourOrder_tr__tbl_background_color;
+    color: $Gbm_YourOrder_tr__tbl_color;
+}
+
+#Gbm_YourOrder_information_div {
+    @include Gbm_border_radius;
+}
+
+#Gbm_YourOrder_information_div2 {
+    background-color: $Gbm_YourOrder_information_div2_background_color;
+    padding: $Gbm_YourOrder_information_div2_padding;
+    width: $Gbm_YourOrder_information_div2_width;
+}
+
+Gbm_YourOrder_Submit_div {
+    position: relative;
+    top: $Gbm_YourOrder_Submit_div_top;
+}
+
+#Gbm_yourOrder_button {
+    width: $Gbm_yourOrder_button_width;
+    height: $Gbm_yourOrder_button_height;
+    background-color: $Gbm_yourOrder_button_background_color;
+    color: $Gbm_yourOrder_button_color;
+    @include Gbm_button_cursor;
+}
+
+/* -------------- */
+#Gbm_Payment_form__div {
+    width: $Gbm_Payment_form__div_width;
+    height: $Gbm_Payment_form__div_height;
+    @include gbm_div__product_grid_top10;
+    @include Gbm_Position_relative;
+    left: $Gbm_Payment_form__div_left;
+}
+
+#Gbm_Payment_title__form {
+    text-align: $Gbm_Payment_title__form_text_align;
+    width: $Gbm_Payment_title__form_width;
+    left: $Gbm_Payment_title__form_left;
+}
+
+#Gbm_Payment_lname_div {
+    width: $Gbm_Payment_lname_div_width;
+    @include float_left;
+    @include Gbm_Position_relative;
+    margin-right: $Gbm_Payment_lname_div_margin_right;
+}
+
+#Gbm_Payment_fname_div {
+    width: $Gbm_Payment_fname_div_width;
+    @include Gbm_Position_relative;
+    @include float_right;
+    margin-left: $Gbm_Payment_fname_div_margin_left;
+}
+
+#Gbm_txt_address__div {
+    width: $Gbm_txt_address__div_width;
+    height: $Gbm_txt_address__div_height;
+}
+
+#Gbm_Payment_Country__div {
+    width: $Gbm_Payment_Country__div_width;
+    @include Gbm_Position_relative;
+    @include float_left;
+    margin-right: $Gbm_Payment_Country__div_margin_right;
+}
+
+#Gbm_Payment_zip__div {
+    @include Gbm_Payment_zip__div_width;
+    @include Gbm_Position_relative;
+    @include float_right;
+    margin-left: $Gbm_Payment_zip__div_margin_left;
+}
+
+#Gbm_Payment_Email__div {
+    @include Gbm_Payment_zip__div_width; 
+    @include Gbm_Position_relative;
+    @include float_left;
+    margin-right: $Gbm_Payment_Email__div_margin_right;
+}
+
+#Gbm_Payment_Phone__div {
+    @include Gbm_Payment_zip__div_width; 
+    @include Gbm_Position_relative;
+    @include float_right;
+    margin-left: $Gbm_Payment_Phone__div_margin_left;
+}
+
+.Gbm_payment_input__div {
+    width: $Gbm_payment_input__div_width;
+}
+
