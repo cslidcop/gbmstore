@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Description</title>
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script src="jquery2.js"></script>
+
+</head>
+
+<style>
+    /* Payment_Gateaway */
+    /* ------------ */
+    #Gbm_Payment_form__package {
+        width: 60%;
+        float: left;
+    }
+
+    #Gbm_YourOrder_div {
+        position: relative;
+        left: 5%;
+        width: 40%;
+        float: right;
+    }
+
+    #Gbm_YourOrder_tbl__div {
+        border-collapse: collapse;
+        width: 298px;
+        height: 100px;
+        text-align: center;
+    }
+
+    #Gbm_YourOrder_tr__tbl {
+        background-color: #dddddd;
+        color: white;
+    }
+
+    #Gbm_YourOrder_information_div {
+        border-radius: 100%;
+    }
+
+    #Gbm_YourOrder_information_div2 {
+        background-color: #dddddd;
+        padding: 8px;
+        width: 283px;
+    }
+
+    Gbm_YourOrder_Submit_div {
+        position: relative;
+        top: 102%;
+    }
+
+    #Gbm_yourOrder_button {
+        width: 298px;
+        height: 36px;
+        background-color: #666666;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* -------------- */
+    #Gbm_Payment_form__div {
+        width: 50%;
+        height: 80%;
+        position: relative;
+        left: 10%;
+        top: 10%;
+    }
+
+    #Gbm_Payment_title__form {
+        text-align: center;
+        width: 100%;
+        left: 10%;
+    }
+
+    #Gbm_Payment_lname_div {
+        width: 45%;
+        position: relative;
+        float: left;
+        margin-right: 5%;
+    }
+
+    #Gbm_Payment_fname_div {
+        width: 45%;
+        position: relative;
+        float: right;
+        margin-left: 5%;
+    }
+
+    #Gbm_txt_address__div {
+        width: 100%;
+        height: 100%;
+    }
+
+    #Gbm_Payment_Country__div {
+        width: 45%;
+        position: relative;
+        float: left;
+        margin-right: 5%;
+    }
+
+    #Gbm_Payment_zip__div {
+        width: 45%;
+        position: relative;
+        float: right;
+        margin-left: 5%;
+    }
+
+    #Gbm_Payment_Email__div {
+        width: 45%;
+        position: relative;
+        float: left;
+        margin-right: 5%;
+    }
+
+    #Gbm_Payment_Phone__div {
+        width: 45%;
+        position: relative;
+        float: right;
+        margin-left: 5%;
+    }
+
+    .Gbm_payment_input__div {
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div id="Gbm_master__div_header">
+        <table id="Gbm_top_menu__table">
+            <tbody>
+                <tr>
+                    <td><a href="index.html" class="Gbm_top_menu__table_link">Home</a></td>
+                    <td><a href="All_product.html" class="Gbm_top_menu__table_link">Our Product</a></td>
+                    <td><a href="About-Us.html" class="Gbm_top_menu__table_link">About Us</a></td>
+                    <td><a href="Contact-Us.html" class="Gbm_top_menu__table_link">Contact Us</a></td>
+                </tr>
+            </tbody>
+    </div>
+    <div id="sidebar" style="background-color: #4682B4"></div>
+    <div id="Gbm_master__div_container">
+        <div id="Gbm_Payment_form__package">
+            <form id="Gbm_Payment_form__div">
+
+                <h2 id="Gbm_Payment_title__form">Payment Gateaway</h2>
+
+                <div id="Gbm_Payment_lname_div">
+                    <label id="Gbm_Payment_lname__div" for="Gbm_payment_fname">Last Name</label><br />
+                    <input id="Gbm_Payment_txt_lname__div" type="text" class="Gbm_payment_input__div" />
+                </div>
+                <div id="Gbm_Payment_fname_div">
+                    <label id="Gbm_lbl__fname" for="Gbm_content_fname">First Name</label><br />
+                    <input id="Gbm_txt__fname" type="text" class="Gbm_payment_input__div" />
+                </div>
+
+                <div id="Gbm_Payment_Address_div">
+                    <label id="Gbm_lbl__address" for="Gbm_address">Address</label><br />
+                    <textarea id="Gbm_txt_address__div"></textarea>
+                </div>
+                <div id="Gbm_Payment_City_div">
+                    <label id="Gbm_Payment_Lbl_City__div" for="Gbm_city ">City</label>
+                    <input id="Gbm_Payment_txt_City__div" type="text" class="Gbm_payment_input__div"
+                        style="width:100%" />
+                </div>
+                <div id="Gbm_Payment_Country__div">
+                    <label id="Gbm_lbl_country" for="Gbm_content_fname">Country</label><br />
+                    <input id="Gbm_txt__country" type="text" class="Gbm_payment_input__div" />
+                </div>
+                <div id="Gbm_Payment_zip__div">
+                    <label id="Gbm_lbl__zip" for="Gbm_content_zip">Zip</label><br />
+                    <input id="Gbm_txt__zip" type="text" class="Gbm_payment_input__div" />
+                </div>
+                <div id="Gbm_Payment_Email__div">
+                    <label id="Gbm_lbl__email" for="Gbm__email">Email</label><br />
+                    <input id="Gbm_txt__email" type="text" class="Gbm_payment_input__div" />
+                </div>
+                <div id="Gbm_Payment_Phone__div">
+                    <label id="Gbm_lbl__phone" for="Gbm__phone">Phone</label><br />
+                    <input id="Gbm_txt__fname" type="text" class="Gbm_payment_input__div" />
+                </div>
+            </form>
+        </div>
+        <div id="Gbm_YourOrder_div">
+            <h2>Your Order</h2>
+            <table id="Gbm_YourOrder_tbl__div" all border="1">
+                <tr id="Gbm_YourOrder_tr__tbl">
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>milk</td>
+                    <td>150</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <br>
+            <div id="Gbm_YourOrder_information_div">
+
+                <input type="radio" id="Gbm_YourOrder_Direct_bank" name="Direct Bank Transfert"
+                    value="Direct Bank Transfert">
+                <label for="Gbm_YourOrder_lbl">Direct Bank Transfert</label><br>
+                <input type="radio" id="Gbm_YourOrder_Cheque_bank__div" name="Cheque Payment" value="Cheque Payment">
+                <label for="Gbm_lbl_Cheque_Payment">Cheque Payment</label><br>
+                <input type="radio" id="Gbm_YourOrder_Credit_Card__div" name="Credit Card" value="Credit">
+                <label for="Gbm_lbl_Credit_Card" maxlength>Credit</label><br><br>
+                <div id="Gbm_YourOrder_information_div2">
+                    <P style="font-size:0.9em">Pay securely using your credit card</P>
+                    <p style="font-size:1em">TEST MODE ENABLED</p>
+                    <label for="Credit Card Number">Credit Card Number</label><br>
+                    <input type="text" id="Credit Card Number" name="Credit Card Number" placeholder="4000790058"><br>
+                    <label for="Card Security">Card Security</label><br>
+                    <input type="text" id="Card Security" name="Card Security" placeholder="123">
+                </div>
+                <div id="Gbm_YourOrder_Submit_div">
+                    <input id="Gbm_yourOrder_button" type="Submit" value="Place Order">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

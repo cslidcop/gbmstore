@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Contact Us</title>
+   <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+   <script src="jquery2.js"></script>
+
+</head>
+
+<style>
+  /* contact-us */
+#Gbm_contact_us_form__div {
+width: 40%;
+height: 80%;
+position: relative;
+left: 5%;
+background-color: red;
+top: 10%;
+}
+
+#Gbm_contact_us_title__form {
+text-align: center;
+width: 100%;
+left: 0%;
+position: relative;
+text-shadow: -4px 4px dimgray;
+font-size: 71px;
+}
+
+#Gbm_lname__div {
+width: 48%;
+position: relative;
+float: left;
+margin-right: 2%;
+}
+
+#Gbm_fname__div {
+width: 48%;
+position: relative;
+float: right;
+margin-left: 2%;
+}
+
+#Gbm_YourMessage__div {
+width: 100%;
+height: 50%;
+position: relative;
+}
+
+#Gbm_area__yourmessage {
+width: 100%;
+height: 50%;
+}
+
+#Gbm_Send__div {
+width: 100%;
+position: relative;
+bottom: 15%;
+}
+
+#Gbm_div-but__Send {
+float: left;
+width: 50%;
+top: 20%;
+}
+
+#Gbm_button__send__div {
+width: 50%;
+height: 50%;
+position: relative;
+font-size: 25px;
+background-color: #191970;
+color: white;
+cursor: pointer;
+}
+
+#Gbm_Cancel__div {
+float: left;
+width: 50%;
+position: relative;
+right: 17%;
+
+}
+
+#Gbm_button__cancel__div {
+width: 50%;
+height: 50%;
+position: relative;
+font-size: 25px;
+background-color: #ff0000;
+color: white;
+cursor: pointer;
+}
+</style>
+
+<body>
+   <div id="Gbm_master__div_header">
+      <table id="Gbm_top_menu__table">
+         <tbody>
+            <tr>
+               <td><a href="index.html" class="Gbm_top_menu__table_link">Home</a></td>
+               <td><a href="All_product.html" class="Gbm_top_menu__table_link">Our Product</a></td>
+               <td><a href="About-Us.html" class="Gbm_top_menu__table_link">About Us</a></td>
+               <td><a href="Contact-Us.html" class="Gbm_top_menu__table_link">Contact Us</a></td>
+            </tr>
+         </tbody>
+   </div>
+   <div id="sidebar" style="background-color: #4682B4"></div>
+   <div id="Gbm_master__div_container">
+      <form id="Gbm_contact_us_form__div">
+         <h2 id="Gbm_contact_us_title__form">Contact Us</h2>
+
+         <div id="Gbm_lname__div">
+             <label id="Gbm_lbl_lname__div" for="Gbm__lname">Last Name</label><br />
+             <input id="Gbm_txt_lname__div" type="text" style="width:100%;" />
+         </div>
+         <div id="Gbm_fname__div">
+             <label id="Gbm_fname_lbl__div" for="Gbm__fname">First Name</label><br />
+             <input id="Gbm_txt__fname" type="text" style="width:100%;" />
+         </div>
+         <div>
+             <label id="Gbm_lbl__email" for="Gbm_email ">Your Email</label>
+             <input id="Gbm_txt__email" type="email" style="width:100%" />
+         </div>
+         <div>
+             <label id="Gbm_lbl__subject" for="Gbm_city ">Subject</label>
+             <input id="Gbm_txt__subject" type="text" style="width:100%" />
+         </div>
+         <div id="Gbm_YourMessage__div">
+             <label id="Gbm_lbl__yourMessage" for="Gbm_yourMessage">Your Message</label><br />
+             <textarea id="Gbm_area__yourmessage"></textarea>
+         </div>
+         <div id="Gbm_Send__div">
+             <div id="Gbm_div-but__Send">
+                 <button id="Gbm_button__send__div" type="button">Send</button>
+             </div>
+             <div id="Gbm_Cancel__div">
+                 <button id="Gbm_button__cancel__div" type="button">Cancel</button>
+             </div>
+         </div>
+     </form>
+   </div>
+</body>
+
+</html>
