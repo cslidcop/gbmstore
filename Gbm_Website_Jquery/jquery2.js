@@ -223,7 +223,7 @@ $(document).ready(function () {
         "width": "80%",
         "position": "absolute"
     }).appendTo("#Gbm_master__div_container");
-    
+
     $("#Gbm_bought_Product__div_table").css({
         "border-collapse": "collapse",
         "height": "360px",
@@ -248,10 +248,10 @@ $(document).ready(function () {
     }).appendTo("#Gbm_Appointment_div");
 
 
-    $("#Gbm_Bought_title__div").css("text-align","center");
+    $("#Gbm_Bought_title__div").css("text-align", "center");
 
-     /*most_bought_product_grid*/
-     $("#gbm_div__product_grid").css({
+    /*most_bought_product_grid*/
+    $("#gbm_div__product_grid").css({
         "position": "relative",
         "width": "90%",
         "height": "80%",
@@ -269,12 +269,14 @@ $(document).ready(function () {
 
     $("#gbm_grid1").css({
         "position": "relative",
-        "margin-left":"0%"});
+        "margin-left": "0%"
+    });
 
 
     $("#gbm_grid2").css({
         "position": "relative",
-        "margin-left":"2.5%"});
+        "margin-left": "2.5%"
+    });
 
 
     $(".Gbm_product_grid__img1").css({
@@ -305,11 +307,11 @@ $(document).ready(function () {
         "width": "23%",
         "height": "40%",
         "float": "left",
-        "top":"10%",
+        "top": "10%",
         "position": "relative"
     });
 
-    $("#gbm_grid5").css("margin-left","0%");
+    $("#gbm_grid5").css("margin-left", "0%");
 
     $("#gbm_grid6").css("margin-left", "2.5%");
 
@@ -323,18 +325,210 @@ $(document).ready(function () {
 
     $("#gbm_grid7").css(
         "margin-right", "0%");
- 
-     $("#gbm_grid8").css("margin-right","2.5%");
- 
-     $("#gbm_title__page_grid").css({
-         "height": "5%",
-         "width": "100%",
-         "position": "relative"
-     });
- 
-     $("#Gbm_product_grid__title").css({
-         "text-align": "center",
-         "font-size": "36px"
-     });
 
+    $("#gbm_grid8").css("margin-right", "2.5%");
+
+    $("#gbm_title__page_grid").css({
+        "height": "5%",
+        "width": "100%",
+        "position": "relative"
+    });
+
+    $("#Gbm_product_grid__title").css({
+        "text-align": "center",
+        "font-size": "36px"
+    });
+
+    /* contact-us */
+    $("#Gbm_contact_us_form__div").css({
+        "width": "40%",
+        "height": "80%",
+        "position": "relative",
+        "left": "5%",
+        "top": "10%"
+    }).appendTo("Gbm_contact_us_form__div");
+
+    $("#Gbm_contact_us_title__form").css({
+        "text-align": "center",
+        "width": "100%",
+        "left": "0%",
+        "position": "relative",
+        "text-shadow": "-4px 4px dimgray",
+        "font-size": "71px"
+    });
+
+    $("#Gbm_lname__div").css({
+        "width": "48%",
+        "position": "relative",
+        "float": "left",
+        "margin-right": "2%",
+    });
+
+    $("#Gbm_fname__div").css({
+        "width": "48%",
+        "position": "relative",
+        "float": "right",
+        "margin-left": "2%"
+    });
+
+    $("#Gbm_YourMessage__div").css({
+        "width": "100%",
+        "height": "50%",
+        "position": "relative"
+    });
+
+    $("#Gbm_area__yourmessage").css({
+        "width": "100%",
+        "height": "50%",
+    });
+
+    $("#Gbm_Send__div").css({
+        "width": "100%",
+        "position": "relative",
+        "bottom": "15%",
+    });
+
+    $("#Gbm_div-but__Send").css({
+        "float": "left",
+        "width": "50%",
+        "top": "20%"
+    });
+
+    $("#Gbm_button__send__div").css({
+        "width": "50%",
+        "height": "50%",
+        "position": "relative",
+        "font-size": "25px",
+        "background-color": "#191970",
+        "color": "white",
+        "cursor": "pointer"
+    });
+
+    $("#Gbm_Cancel__div").css({
+        "float": "left",
+        "width": "50%",
+        "position": "relative",
+        "right": "17%"
+    });
+
+    $("#Gbm_button__cancel__div").css({
+        "width": "50%",
+        "height": "50%",
+        "position": "relative",
+        "font-size": "25px",
+        "background-color": "#ff0000",
+        "color": "white",
+        "cursor": "pointer"
+    });
+
+    /* Payment_Gateaway */
+    /* ------------ */
+    $("#Gbm_Payment_form__package").css({
+        "width":"60%",
+        "float": "left"
+    });
+
+    $("#Gbm_YourOrder_div").css({
+        "position": "relative",
+        "width": "40%",
+        "float": "right"
+    });
+
+$("#Gbm_YourOrder_tbl__div").css({
+    "border-collapse": "collapse",
+    "width": "298px",
+    "height":"100px",
+    "text-align": "center"
+});
+
+$("#Gbm_YourOrder_tr__tbl").css({
+    "background-color": "#dddddd",
+    "color": "white"
+});
+
+$("#Gbm_YourOrder_information_div").css(
+    "border-radius","100%");
+
+$("#Gbm_YourOrder_information_div2").css({
+    "background-color": "#dddddd",
+    "padding": "8px",
+    "width": "283px"
+});
+
+$("Gbm_YourOrder_Submit_div").css({
+    "position": "relative",
+    "top": "102%"
+});
+
+$("#Gbm_yourOrder_button").css({
+    "width": "298px",
+    "height":"36px",
+    "background-color": "#666666",
+    "color": "white",
+    "cursor": "pointer"
+});
+
+/* -------------- */
+$("#Gbm_Payment_form__div").css({
+    "width": "50%",
+    "height":"80%",
+    "position": "relative",
+    "left": "10%",
+    "top": "10%"
+});
+
+$("#Gbm_Payment_title__form").css({
+    "text-align":"center",
+    "width": "100%",
+    "left": "10%"
+});
+
+$("#Gbm_Payment_lname_div").css({
+    "width": "45%",
+    "position": "relative",
+    "float": "left",
+    "margin-right": "5%"
+});
+
+$("#Gbm_Payment_fname_div").css({
+    "width": "45%",
+    "position": "relative",
+    "float": "right",
+    "margin-left": "5%",
+});
+
+$("#Gbm_txt_address__div").css({
+    "width": "100%",
+    "height":"100%"
+});
+
+$("#Gbm_Payment_Country__div").css({
+    "width": "45%",
+    "position": "relative",
+    "float": "left",
+    "margin-right": "5%"
+});
+
+$("#Gbm_Payment_zip__div").css({
+    "width": "45%",
+    "position": "relative",
+    "float": "right",
+    "margin-left": "5%",
+});
+
+$("#Gbm_Payment_Email__div").css({
+    "width": "45%",
+    "position": "relative",
+    "float": "left",
+    "margin-right": "5%"
+});
+
+$("#Gbm_Payment_Phone__div").css({
+    "width": "45%",
+    "position": "relative",
+    "float": "right",
+    "margin-left": "5%",
+});
+
+$(".Gbm_payment_input__div").css("width","100%");
 });
