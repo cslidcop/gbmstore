@@ -1,0 +1,234 @@
+﻿@import "style2";
+
+/*body*/
+$body_margin: 0;
+
+/*Gbm_master__div_header*/
+$Gbm_master__div_header_background-color: #191970;
+$Gbm_master__div_header_width: 100%;
+$Gbm_master__div_header_height: 10%;
+$Gbm_master__div_header_position: absolute;
+
+/*Gbm_master__div_sidebar*/
+$Gbm_master__div_sidebar_background-color: #4682B4;
+$Gbm_master__div_sidebar_width: 10%;
+$Gbm_master__div_sidebar_height: 90%;
+$Gbm_master__div_sidebar_position: absolute;
+$Gbm_master__div_sidebar_top: 10%;
+
+/*Gbm_master__div_container*/
+$Gbm_master__div_container_background-color: white;
+$Gbm_master__div_container_width: 90%;
+$Gbm_master__div_container_height: 90%;
+$Gbm_master__div_container_position: absolute;
+$Gbm_master__div_container_top: 10%;
+$Gbm_master__div_container_left: 10%;
+
+/*Gbm_position_absolute*/
+@mixin Gbm_master {
+    position: $Gbm_master__div_header_position;
+}
+
+/*Gbm_top_10%*/
+@mixin Gbm_top {
+    top: $Gbm_master__div_sidebar_top;
+}
+
+/*Gbm_color_white*/
+@mixin color_white {
+    color: $Gbm_top_menu__table_color;
+}
+
+body {
+    margin: $body_margin;
+}
+
+/*Gbm_top_menu*/
+$Gbm_top_menu__table_border-spacing: 12px;
+$Gbm_top_menu__table_float: right;
+$Gbm_top_menu__table_margin-right: 2%;
+$Gbm_top_menu__table_color: white;
+$Gbm_top_menu__table_text-decoration: none;
+$Gbm_top_menu__table_font-size: 20px;
+$Gbm_top_menu__table_font-family: sans-serif;
+$Gbm_top_menu__table_top: 11%;
+$Gbm_top_menu__table_position: relative;
+
+/*Gbm_top_menu__table_link*/
+$Gbm_top_menu__table_link_text_decoration: none;
+
+/*Gbm_top_menu__table_link:hover*/
+$Gbm_top_menu__table_link_hover_background_color: red;
+$Gbm_top_menu__table_link_hover_text_decoration: underline;
+
+/*Gbm_position_relative*/
+@mixin position_relative {
+    position: $Gbm_top_menu__table_position;
+}
+
+/*Gbm_home*/
+$Gbm_AdminDahboard_link__spn_text_decoration: none;
+$Gbm_AdminDahboard_link__spn_color: black;
+$Gbm_AdminDahboard_link__spn_font_family: sans-serif;
+$Gbm_AdminDahboard_link__spn_font_size: 28px;
+
+
+/*Gbm_master__div_header*/
+#Gbm_master__div_header {
+    background-color: $Gbm_master__div_header_background-color;
+    width: $Gbm_master__div_header_width;
+    height: $Gbm_master__div_header_height;
+    @include Gbm_master;
+}
+
+/*Gbm_master__div_sidebar*/
+#Gbm_master__div_sidebar {
+    background-color: $Gbm_master__div_sidebar_background-color;
+    width: $Gbm_master__div_sidebar_width;
+    height: $Gbm_master__div_sidebar_height;
+    @include Gbm_master;
+    @include Gbm_top;
+}
+
+/*Gbm_master__div_container*/
+#Gbm_master__div_container {
+    background-color: $Gbm_master__div_container_background-color;
+    width: $Gbm_master__div_container_width;
+    height: $Gbm_master__div_container_height;
+    left: $Gbm_master__div_container_left;
+    @include Gbm_master;
+    @include Gbm_top;
+}
+/*Gbm-top_menu*/
+#Gbm_top_menu__table {
+    border-spacing: $Gbm_top_menu__table_border-spacing;
+    float: $Gbm_top_menu__table_float;
+    margin-right: $Gbm_top_menu__table_margin-right;
+    text-decoration: $Gbm_top_menu__table_text-decoration;
+    font-size: $Gbm_top_menu__table_font-size;
+    font-family: $Gbm_top_menu__table_font-family;
+    top: $Gbm_top_menu__table_top;
+    @include position_relative;
+    @include color_white;
+}
+
+.Gbm_top_menu__table_link {
+    text-decoration: $Gbm_top_menu__table_link_text_decoration;
+    @include color_white;
+}
+
+.Gbm_top_menu__table_link:hover {
+    background-color: $Gbm_top_menu__table_link_hover_background_color;
+    text-decoration: $Gbm_top_menu__table_link_hover_text_decoration;
+}
+
+/*Gbm_home*/
+.Gbm_AdminDahboard_link__spn {
+    text-decoration: $Gbm_AdminDahboard_link__spn_text_decoration;
+    color: $Gbm_AdminDahboard_link__spn_color;
+    font-family: $Gbm_AdminDahboard_link__spn_font_family;
+    font-size: $Gbm_AdminDahboard_link__spn_font_size;
+}
+
+/* Appointment */
+/*Gbm_Appointment_Tbl__div*/
+$Gbm_Appointment_Tbl__div_border_collapse: collapse;
+$Gbm_Appointment_Tbl__div_height: 360px;
+$Gbm_Appointment_Tbl__div_width: 1000px;
+$Gbm_Appointment_Tbl__div_text_align: center;
+
+@mixin gbm_appoint_bookn_bought_collpase {
+    border-collapse: $Gbm_Appointment_Tbl__div_border_collapse;
+    height: $Gbm_Appointment_Tbl__div_height;
+    width: $Gbm_Appointment_Tbl__div_width;
+    text-align: $Gbm_Appointment_Tbl__div_text_align;
+}
+
+/*Gbm_Appointment_title__div*/
+$Gbm_Appointment_title__div_text_align: center;
+
+@mixin Gbm_title_text_align_center {
+    text-align: $Gbm_Appointment_title__div_text_align;
+}
+
+/*Gbm_Appointment_div*/
+$Gbm_Appointment_div_left: 10%;
+$Gbm_Appointment_div_width: 90%;
+$Gbm_Appointment_div_height: 80%;
+
+@mixin table_appoint_book_bought {
+    left: $Gbm_Appointment_div_left;
+    width: $Gbm_Appointment_div_width;
+    height: $Gbm_Appointment_div_height;
+}
+
+/*Gbm_Appointment_Tr__table*/
+$Gbm_Appointment_Tr__table_background_color: #4682B4;
+$Gbm_Appointment_Tr__table_color: white;
+
+@mixin gbm_table_tr {
+    background-color: $Gbm_Appointment_Tr__table_background_color;
+    color: $Gbm_Appointment_Tr__table_color;
+}
+
+#Gbm_Appointment_Tbl__div {
+    @include gbm_appoint_bookn_bought_collpase;
+}
+
+#Gbm_Appointment_title__div {
+    @include Gbm_title_text_align_center;
+}
+
+#Gbm_Appointment_div {
+    @include Gbm_Position_relative;
+    @include gbm_div__product_grid_top10;
+    @include table_appoint_book_bought;
+}
+
+#Gbm_Appointment_Tr__table {
+    @include gbm_table_tr;
+}
+
+/*Booking*/
+#Gbm_Booking_table_div {
+
+    @include table_appoint_book_bought;
+    @include Gbm_Position_relative;
+    @include gbm_div__product_grid_top10;
+}
+
+#Gbm_Booking_title__div {
+    @include Gbm_title_text_align_center;
+}
+
+#Gbm_Booking_tbl__div {
+    @include gbm_appoint_bookn_bought_collpase;
+}
+
+#Gbm_Booking_tr__div {
+    @include gbm_table_tr;
+}
+
+/*bought_product*/
+  #Gbm_bought_product__div {
+     @include table_appoint_book_bought;
+    @include Gbm_Position_relative;
+    @include gbm_div__product_grid_top10;
+}
+
+#Gbm_bought_Product__div_table {
+    @include gbm_appoint_bookn_bought_collpase;
+}
+
+#Gbm_bought_product__table_tr {
+        @include gbm_table_tr;
+}
+
+/*Gbm_bought_product__div_a_i*/
+$Gbm_bought_product__div_a_i_font_size: 24px;
+$Gbm_bought_product__div_a_i_margin_top: 2%;
+
+#Gbm_bought_product__div_a_i {
+    font-size: $Gbm_bought_product__div_a_i_font_size;
+    margin-top: $Gbm_bought_product__div_a_i_margin_top;
+}
